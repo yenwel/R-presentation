@@ -1,10 +1,10 @@
-Introduction-to-R
+Introduction to R
 ========================================================
-author: 
+author: Jan Vandepitte
 date: 
 autosize: true
 
-First Slide
+R a statistical programming language
 ========================================================
 
 For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.

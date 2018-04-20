@@ -4,34 +4,72 @@ author: Jan Vandepitte
 date: 
 autosize: true
 
-R a statistical programming language
+
+1. Why R
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+2. R in Microsoft products
+========================================================
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+2.1 Microsoft R Open (R extension)
+========================================================
 
-Slide With Code
+2.2 Microsoft R Server (run time)
+========================================================
+
+2.3 Microsoft R Archive Network (MRAN)
+========================================================
+
+2.4 R in SQL Server
+========================================================
+
+2.5 R in visual studio
+========================================================
+
+2.6 R in Power BI
+========================================================
+
+2.7 Azure machine learning
+========================================================
+
+2.8 Azure HDInsight (hadoop as a service)
+========================================================
+
+2.9 Azure Databricks (spark as a service)
+========================================================
+
+3. Concepts
+========================================================
+
+3.1 AI
+========================================================
+
+3.2 DIKW pyramid
+========================================================
+
+3.3 DIKW loop
+========================================================
+
+3.4 Statistics and Machine learning
+========================================================
+
+3.5 Error terms
+========================================================
+
+3.6 hypothesis testing
+========================================================
+
+3.6 Error types
+========================================================
+
+3.7 Information = Variance
+========================================================
+
+3.8 Big data
 ========================================================
 
 
-```r
-summary(cars)
-```
 
-```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
-```
 
-Slide With Plot
+4. Demo's
 ========================================================
-
-![plot of chunk unnamed-chunk-2](Introduction-to-R-figure/unnamed-chunk-2-1.png)

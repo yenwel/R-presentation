@@ -108,9 +108,11 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3.2 DIKW pyramid
 ========================================================
+![alt text](Introduction-to-R-figure/DIKWpyramid.gif "DIKWpy")
 
-3.3 DIKW loop
+3.3 DIKW cycle
 ========================================================
+![alt text](Introduction-to-R-figure/DIKWcycle.jpg "DIKWcyc")
 
 3.4 Statistics and Machine learning
 ========================================================

@@ -11,8 +11,7 @@ autosize: true
 0. What is R
 ========================================================
 
-  * Script language for statistical programming
-  * Open source
+  * Open source Script language for statistical programming  * 
   * data preparation, machine learning, experimentation, visualization (presentation, notebook, shiny dashboard)
   * packaging system (CRAN) like nuget, npm
 ```{r}
@@ -50,7 +49,13 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
  * packages: https://cran.r-project.org/
  * IDE Rstudio: https://www.rstudio.com/
  * notable R packages:
-   * dplyr and derivatives: high level data wrangling : https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html
+   * dplyr and derivatives: high level data wrangling 
+   * shiny : Interactive dashboarding
+   * RCurl : Get data from an API
+   * knitR: Mix markdown and R (this pres)
+   * ggplot : Nice graphs
+   * lattice : Multivariate graphs
+   * devtools : Get packages straight from github
    
 1.2 Checklist: Is R the tool for me right now?
 ========================================================

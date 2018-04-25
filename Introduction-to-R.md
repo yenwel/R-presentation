@@ -27,10 +27,12 @@ autosize: true
 ========================================================
 R improved some pittfals of typical R distribution (single threaded, standardization of packages and models, ...) CRAN
 
+![alt text](Introduction-to-R-figure/ClarkHead.png "MRO")
 
 
 2.2 Microsoft Machine Learning Server (run time)
 ========================================================
+Client/Server
 Operationalizing R (now also python)
 DeployR
 ScaleR

@@ -116,6 +116,7 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3.4 Statistics and Machine learning
 ========================================================
+![alt text](Introduction-to-R-figure/machinelearning.png "machinelearning")
 
 3.5 Error terms
 ========================================================

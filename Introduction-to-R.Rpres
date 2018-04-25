@@ -115,7 +115,7 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3.5 Error terms
 ========================================================
-Reduce Errors (fix bugs? unit testing?): Stochastical, continuous
+Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical, continuous
 
 
 3.6 hypothesis testing
@@ -145,9 +145,15 @@ Larger sample size: more normal distribution
 ========================================================
 deep neural networks, more data and faster hardware (gpu)
 
+![alt text](Introduction-to-R-figure/deeplearning.png "deeplearning")
+
 4. Demo's
 ========================================================
-
+  * supply chain analysis : 
+    * https://github.com/yenwel/SCOperationsInventory
+    * https://github.com/yenwel/supplychainplanning
+  * shiny app connecting to database: https://github.com/yenwel/shinyDatabaseExplorer
+  * this presentation: https://github.com/yenwel/R-presentation
 
 4.1 Shiny App
 ========================================================

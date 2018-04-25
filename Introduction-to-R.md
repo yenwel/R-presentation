@@ -120,7 +120,7 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3.5 Error terms
 ========================================================
-Reduce Errors (fix bugs? unit testing?): Stochastical, continuous
+Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical, continuous
 
 
 3.6 hypothesis testing

@@ -141,5 +141,5 @@ Visualization with R? PowerBIR?? (jk :p)
 4.1 Shiny App
 ========================================================
 
-<iframe src="https://bovi-analytics.shinyapps.io/GplusEdata/"></iframe>
+<iframe src="https://bovi-analytics.shinyapps.io/GplusEdata/" width="100%" height ="75%"></iframe>
 

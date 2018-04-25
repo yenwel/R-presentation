@@ -3,14 +3,35 @@ Introduction to R
 author: Jan Vandepitte
 date: 
 autosize: true
+---
 
+![alt text](Introduction-to-R-figure/Rlogo.png "Rlogo")
+
+
+0. What is R
+========================================================
+
+  * Script language for statistical programming
+  * Open source
+  * LISP -> Scheme -> S -> R (cfr Ecmascript)
+    * REPL
+    * lambda's
+    * reflection
+    * dynamic (if it quacks like a duck)
+    * abstract (for domain experts)
+  * data preparation, machine learning, experimentation, visualization (presentation, notebook, shiny dashboard)
+  * packaging system (CRAN) like nuget, npm
+```{r}
+x <- 1
+x + 1
+```
 
 1. Why R
 ========================================================
 
   * AI coming out of winter (pit of dispair)
-  * Omnipresent AI (Skill like SQL, javascript)
-  * Open source, Eco-system (Age), Age (de facto standard)
+  * Omnipresent in AI (Skill like SQL, Ecmascript)
+  * Open source, Eco-system, History (de facto standard)
   * different backends (citizen scientist, Big Data, Keras backend)
   * Backed by and integrated in Microsoft products
   
@@ -25,7 +46,8 @@ autosize: true
 
 2.1 Microsoft R Open (R extension)
 ========================================================
-R improved some pittfals of typical R distribution (single threaded, standardization of packages and models, ...) CRAN
+Improved some pittfals of typical R distribution (single threaded, standardization of packages and models, object orientation...) CRAN
+(see Typescript)
 
 ![alt text](Introduction-to-R-figure/ClarkHead.png "MRO")
 
@@ -33,21 +55,30 @@ R improved some pittfals of typical R distribution (single threaded, standardiza
 2.2 Microsoft Machine Learning Server (run time)
 ========================================================
 Client/Server
-Operationalizing R (now also python)
-DeployR
-ScaleR
+Operationalizing R 
+  * DeployR
+  * ScaleR
+Now also python
 
 2.3 Microsoft R Archive Network (MRAN)
 ========================================================
+Standardized package, snapshotting in time
 
 2.4 R in SQL Server
 ========================================================
+Machine learning services in SQL Server
+![alt text](Introduction-to-R-figure/SQLServerR.png "SQLServerR")
 
 2.5 R in visual studio
 ========================================================
 
+![alt text](Introduction-to-R-figure/VisualStudio.png "VisualStudio")
+
 2.6 R in Power BI
 ========================================================
+Visualization with R? PowerBIR?? (jk :p)
+
+![alt text](Introduction-to-R-figure/PowerBIR.png "PowerBIR")
 
 2.7 Azure machine learning
 ========================================================
@@ -57,6 +88,11 @@ ScaleR
 
 2.9 Azure Databricks (spark as a service)
 ========================================================
+
+2.10 Certification as a Data Scientist
+========================================================
+
+![alt text](Introduction-to-R-figure/Certification.png "Certification")
 
 3. Concepts
 ========================================================

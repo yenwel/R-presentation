@@ -115,6 +115,8 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3.5 Error terms
 ========================================================
+Reduce Errors (fix bugs? unit testing?): Stochastical, continuous
+
 
 3.6 hypothesis testing
 ========================================================
@@ -122,15 +124,26 @@ Visualization with R? PowerBIR?? (jk :p)
 3.6 Error types
 ========================================================
 
+![alt text](Introduction-to-R-figure/errortypes.png "errortypes")
+
 3.7 Information = Variance
 ========================================================
 
-3.8 Big data
+3.8 Big data - Central Limit Theorem
+========================================================
+Larger sample size: more normal distribution
+
+![alt text](Introduction-to-R-figure/IllustrationCentralTheorem.png "IllustrationCentralTheorem")
+
+
+3.9 Big data - Power increases with sample size
 ========================================================
 
-3.8 Deep learning
-========================================================
+![alt text](Introduction-to-R-figure/statisticalpower.png "statisticalpower")
 
+3.10 Deep learning
+========================================================
+deep neural networks, more data and faster hardware (gpu)
 
 4. Demo's
 ========================================================

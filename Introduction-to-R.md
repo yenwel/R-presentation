@@ -45,6 +45,7 @@ x + 1
 
  * 2015 Microsoft buys Revolution Analytics 
  * R Integrated in several products
+ * https://mran.microsoft.com
 
 ![alt text](Introduction-to-R-figure/File_Revolution_Analytics_logo.png "Logo ReAn")
 
@@ -135,3 +136,10 @@ Visualization with R? PowerBIR?? (jk :p)
 
 4. Demo's
 ========================================================
+
+
+4.1 Shiny App
+========================================================
+
+<iframe src="https://bovi-analytics.shinyapps.io/GplusEdata/"></iframe>
+

@@ -8,14 +8,32 @@ autosize: true
 1. Why R
 ========================================================
 
+  * AI coming out of winter (pit of dispair)
+  * Omnipresent AI (Skill like SQL, javascript)
+  * Open source, Eco-system (Age), Age (de facto standard)
+  * different backends (citizen scientist, Big Data, Keras backend)
+  * Backed by and integrated in Microsoft products
+  
 2. R in Microsoft products
 ========================================================
 
+ * 2015 Microsoft buys Revolution Analytics 
+ * R Integrated in several products
+
+![alt text](Introduction-to-R-figure/File_Revolution_Analytics_logo.png "Logo ReAn")
+
+
 2.1 Microsoft R Open (R extension)
 ========================================================
+R improved some pittfals of typical R distribution (single threaded, standardization of packages and models, ...) CRAN
 
-2.2 Microsoft R Server (run time)
+
+
+2.2 Microsoft Machine Learning Server (run time)
 ========================================================
+Operationalizing R (now also python)
+DeployR
+ScaleR
 
 2.3 Microsoft R Archive Network (MRAN)
 ========================================================

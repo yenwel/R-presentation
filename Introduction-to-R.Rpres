@@ -13,17 +13,27 @@ autosize: true
 
   * Script language for statistical programming
   * Open source
-  * LISP -> Scheme -> S -> R (cfr Ecmascript)
-    * REPL
-    * lambda's
-    * reflection
-    * dynamic (if it quacks like a duck)
-    * abstract (for domain experts)
   * data preparation, machine learning, experimentation, visualization (presentation, notebook, shiny dashboard)
   * packaging system (CRAN) like nuget, npm
 ```{r}
 x <- 1
 x + 1
+```
+
+0.1 Origins in LISP
+========================================================
+LISP -> Scheme -> S -> R (cfr Ecmascript)
+ * REPL
+ * lambda's
+ * reflection (code is data)
+ * dynamic (if it quacks like a duck)
+ * abstract away underlying system (for domain experts)
+
+```{r}
+myF <- function(x) { x+1 }
+myF
+myF(1)
+apply(matrix(c(1,2,3,4),2,2),1,myF)
 ```
 
 1. Why R
@@ -34,6 +44,20 @@ x + 1
   * Open source, Eco-system, History (de facto standard)
   * different backends (citizen scientist, Big Data, Keras backend)
   * Backed by and integrated in Microsoft products
+
+1.1 Notable R tools in ecosystem
+======================================================== 
+ * packages: https://cran.r-project.org/
+ * IDE Rstudio: https://www.rstudio.com/
+ * notable R packages:
+   * dplyr and derivatives: high level data wrangling : https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html
+   
+1.2 Checklist: Is R the tool for me right now?
+========================================================
+ * Do I want to use free (like beer) software : yes
+ * Do I want to experiment with different models : yes 
+ * Does my data fit in main memory of my computer (no big data ): yes
+ * Doesn't my data fit in main memory of my computer : yes with some prerequisites
   
 2. R in Microsoft products
 ========================================================
@@ -115,7 +139,9 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3.5 Error terms
 ========================================================
-Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical, continuous
+Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical element.
+
+![alt text](Introduction-to-R-figure/residual.png "residual")![alt text](Introduction-to-R-figure/errorterm2.jpg "errorterm")
 
 
 3.6 hypothesis testing
@@ -141,11 +167,22 @@ Larger sample size: more normal distribution
 
 ![alt text](Introduction-to-R-figure/statisticalpower.jpg "statisticalpower")
 
-3.10 Deep learning
+
+3.10 Big data - Data is the new oil
 ========================================================
-deep neural networks, more data and faster hardware (gpu)
+
+Conclusion: the more (quality) data, the better for our models
+
+New headaches: Horizontal scalability, distributed systems, ...
+
+
+3.11 Deep learning
+========================================================
+deep neural networks, more data and faster hardware (GPU)
 
 ![alt text](Introduction-to-R-figure/deeplearning.png "deeplearning")
+
+> When in doubt use brute force ~ Ken Thompson
 
 4. Demo's
 ========================================================

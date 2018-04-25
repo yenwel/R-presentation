@@ -144,15 +144,21 @@ Larger sample size: more normal distribution
 3.9 Big data - Power increases with sample size
 ========================================================
 
-![alt text](Introduction-to-R-figure/statisticalpower.png "statisticalpower")
+![alt text](Introduction-to-R-figure/statisticalpower.jpg "statisticalpower")
 
 3.10 Deep learning
 ========================================================
 deep neural networks, more data and faster hardware (gpu)
 
+![alt text](Introduction-to-R-figure/deeplearning.png "deeplearning")
+
 4. Demo's
 ========================================================
-
+  * supply chain analysis : 
+    * https://github.com/yenwel/SCOperationsInventory
+    * https://github.com/yenwel/supplychainplanning
+  * shiny app connecting to database: https://github.com/yenwel/shinyDatabaseExplorer
+  * this presentation: https://github.com/yenwel/R-presentation
 
 4.1 Shiny App
 ========================================================

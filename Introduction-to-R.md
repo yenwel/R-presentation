@@ -124,6 +124,7 @@ Now also python
 2.3 Microsoft R Archive Network (MRAN)
 ========================================================
 Standardized package, snapshotting in time
+https://mran.microsoft.com/
 
 2.4 R in SQL Server
 ========================================================

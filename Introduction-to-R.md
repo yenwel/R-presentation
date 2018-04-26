@@ -157,9 +157,11 @@ Visualization with R? PowerBIR?? (jk :p)
 
 3. Concepts
 ========================================================
+In the following segment I try to provide a high level run through of basic concepts of AI, machine learning and statistics
 
 3.1 AI
 ========================================================
+![alt text](Introduction-to-R-figure/AI.jpg "AI")
 
 3.2 DIKW pyramid
 ========================================================
@@ -179,10 +181,6 @@ Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical element.
 
 ![alt text](Introduction-to-R-figure/residual.png "residual")![alt text](Introduction-to-R-figure/errorterm2.jpg "errorterm")
 
-
-3.6 hypothesis testing
-========================================================
-
 3.6 Error types
 ========================================================
 
@@ -190,6 +188,13 @@ Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical element.
 
 3.7 Information = Variance
 ========================================================
+
+![alt text](Introduction-to-R-figure/varianceisinformation1.png "variance1")
+
+3.7 Information = Variance
+========================================================
+
+![alt text](Introduction-to-R-figure/varianceisinformation2.png "variance2")
 
 3.8 Big data - Central Limit Theorem
 ========================================================

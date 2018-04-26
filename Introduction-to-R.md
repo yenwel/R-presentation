@@ -32,6 +32,10 @@ LISP -> Scheme -> S -> R (cfr Ecmascript)
  * reflection (code is data)
  * dynamic (if it quacks like a duck)
  * abstract away underlying system (for domain experts)
+ 
+
+0.2 Origins in LISP (demo)
+========================================================
 
 
 ```r
@@ -82,6 +86,7 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
    * [ggplot2](http://ggplot2.org/) : Nice graphs
    * [lattice](http://lattice.r-forge.r-project.org/) : Multivariate graphs
    * [devtools](https://www.rstudio.com/products/rpackages/devtools/) : Get packages straight from github and more fun
+   * [tableplot](https://cran.r-project.org/web/packages/tabplot/vignettes/tabplot-vignette.html): visualize big datasets
    
 1.2 Checklist: Is R the tool for me right now?
 ========================================================
@@ -205,7 +210,7 @@ Larger sample size: more normal distribution
 Conclusion: the more (quality) data, the better for our models
 
 ![alt text](Introduction-to-R-figure/dataoil.png "dataoil")
-
+r
 New headaches: Horizontal scalability, distributed systems, ...
 
 

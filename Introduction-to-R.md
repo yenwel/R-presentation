@@ -221,7 +221,7 @@ Conclusion: the more (quality) data, the better for our models
 
 ![alt text](Introduction-to-R-figure/dataoil.png "dataoil")
 r
-New headaches: Horizontal scalability, distributed systems, ...
+New headaches: Horizontal scalability, distributed systems, CAP theoreum ...
 
 
 3.11 Deep learning
@@ -232,7 +232,40 @@ deep neural networks, more data and faster hardware (GPU)
 
 > When in doubt use brute force ~ Ken Thompson
 
-4. Demo's
+4. R for the .NET programmer
+========================================================
+In knitR it's also possible to run code from other languages:
+  * https://yihui.name/knitr/demo/engines/
+  * http://datadrivensecurity.info/blog/posts/2015/Jun/running-other-languages-in-r-markdown-files/
+So let's add an engine for .net
+
+```r
+eng_dotnet <- function(options) {
+  out <- ''
+  # if eval != FALSE compile/run the code, preserving output
+  if (options$eval) {
+    # https://github.com/filipw/dotnet-script : choco install dotnet.script
+    torun <- sprintf('dotnet script eval "%s"', paste(options$code, collapse = '\n'))
+    out <- system(command = torun, intern=TRUE)
+  }
+  # spit back stuff to the user
+  engine_output(options, options$code, out)
+}
+knitr::knit_engines$set(dotnet=eng_dotnet)
+```
+4.1 Let's try out our new engine
+========================================================
+
+```dotnet
+var i = 1;
+i++;
+Console.WriteLine(i);
+Console.WriteLine(i);
+Console.WriteLine(i);
+Console.WriteLine(i);
+```
+
+5. Demo's
 ========================================================
   * supply chain analysis : 
     * https://github.com/yenwel/SCOperationsInventory
@@ -240,7 +273,7 @@ deep neural networks, more data and faster hardware (GPU)
   * shiny app connecting to database: https://github.com/yenwel/shinyDatabaseExplorer
   * this presentation: https://github.com/yenwel/R-presentation
 
-4.1 Shiny App
+5.1 Shiny App
 ========================================================
 
 <iframe src="https://bovi-analytics.shinyapps.io/GplusEdata/" width="100%" height ="300%"></iframe>

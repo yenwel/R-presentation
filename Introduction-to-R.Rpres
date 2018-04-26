@@ -49,18 +49,18 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
  * packages: https://cran.r-project.org/
  * IDE Rstudio: https://www.rstudio.com/
  * notable R packages:
-   * dplyr and derivatives: high level data wrangling 
-   * shiny : Interactive dashboarding
-   * RCurl : Get data from an API
-   * knitR: Mix markdown and R (this pres)
-   * ggplot : Nice graphs
-   * lattice : Multivariate graphs
-   * devtools : Get packages straight from github
+   * [dplyr](https://dplyr.tidyverse.org/) and derivatives: high level data wrangling 
+   * [shiny](https://shiny.rstudio.com/) : Interactive dashboarding
+   * [RCurl](http://www.omegahat.net/RCurl/) : Get data from an API
+   * [knitR](https://yihui.name/knitr/): Mix markdown and R (this pres)
+   * [ggplot2](http://ggplot2.org/) : Nice graphs
+   * [lattice](http://lattice.r-forge.r-project.org/) : Multivariate graphs
+   * [devtools](https://www.rstudio.com/products/rpackages/devtools/) : Get packages straight from github and more fun
    
 1.2 Checklist: Is R the tool for me right now?
 ========================================================
  * Do I want to use free (like beer) software : yes
- * Do I want to experiment with different models : yes 
+ * Do I want to experiment with different models from different creators : yes 
  * Does my data fit in main memory of my computer (no big data ): yes
  * Doesn't my data fit in main memory of my computer : yes with some prerequisites
   
@@ -177,6 +177,8 @@ Larger sample size: more normal distribution
 ========================================================
 
 Conclusion: the more (quality) data, the better for our models
+
+![alt text](Introduction-to-R-figure/dataoil.png "dataoil")
 
 New headaches: Horizontal scalability, distributed systems, ...
 

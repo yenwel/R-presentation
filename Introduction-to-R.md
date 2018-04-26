@@ -143,16 +143,20 @@ Visualization with R? PowerBIR?? (jk :p)
 
 2.7 Azure machine learning
 ========================================================
+![alt text](Introduction-to-R-figure/azureml.png "azureml")
 
 2.8 Azure HDInsight (hadoop as a service)
 ========================================================
+![alt text](Introduction-to-R-figure/hdinsights.png "hdinsights")
+http://blog.revolutionanalytics.com/2015/06/using-hadoop-with-r-it-depends.html
 
 2.9 Azure Databricks (spark as a service)
 ========================================================
+R one of the languages on Apache Spark (besides Scala and Python)
+![alt text](Introduction-to-R-figure/databricks.png "databricks")
 
 2.10 Certification as a Data Scientist
 ========================================================
-
 ![alt text](Introduction-to-R-figure/Certification.png "Certification")
 
 3. Concepts

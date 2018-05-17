@@ -1115,12 +1115,20 @@ So let&#39;s add an engine for .net</li>
 </ul>
 
 <pre><code class="r">eng_dotnet &lt;- function(options) {
+  # create a temporary file
+
+  f &lt;- basename(tempfile(&quot;dotnet&quot;, &#39;.&#39;, paste(&#39;.&#39;, &quot;dotnet&quot;, sep = &#39;&#39;)))
+  on.exit(unlink(f)) # cleanup temp file on function exit
+  writeLines(options$code, f)
+
   out &lt;- &#39;&#39;
   # if eval != FALSE compile/run the code, preserving output
   if (options$eval) {
-    # https://github.com/filipw/dotnet-script : choco install dotnet.script
-    torun &lt;- sprintf(&#39;dotnet script eval &quot;%s&quot;&#39;, paste(options$code, collapse = &#39;\n&#39;))
-    out &lt;- system(command = torun, intern=TRUE)
+    # https://github.com/filipw/dotnet-script : 
+    # choco install dotnet.script 
+    # or 
+    # dotnet tool install -g dotnet-script (preferred)
+    out &lt;- system(sprintf(&#39;dotnet script %s&#39;, paste(f, options$engine.opts)), intern=TRUE)
   }
   # spit back stuff to the user
   engine_output(options, options$code, out)
@@ -1136,10 +1144,16 @@ knitr::knit_engines$set(dotnet=eng_dotnet)
 <div class="slideContent" >
 <pre><code class="dotnet">var i = 1;
 i++;
-Console.WriteLine(i);
-Console.WriteLine(i);
-Console.WriteLine(i);
-Console.WriteLine(i);
+Console.WriteLine(i++);
+Console.WriteLine(++i);
+Console.WriteLine(i--);
+Console.WriteLine(--i);
+</code></pre>
+
+<pre><code>2
+4
+4
+2
 </code></pre>
 
 </div>

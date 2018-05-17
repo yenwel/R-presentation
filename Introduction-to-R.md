@@ -241,12 +241,20 @@ So let's add an engine for .net
 
 ```r
 eng_dotnet <- function(options) {
+  # create a temporary file
+
+  f <- basename(tempfile("dotnet", '.', paste('.', "dotnet", sep = '')))
+  on.exit(unlink(f)) # cleanup temp file on function exit
+  writeLines(options$code, f)
+  
   out <- ''
   # if eval != FALSE compile/run the code, preserving output
   if (options$eval) {
-    # https://github.com/filipw/dotnet-script : choco install dotnet.script
-    torun <- sprintf('dotnet script eval "%s"', paste(options$code, collapse = '\n'))
-    out <- system(command = torun, intern=TRUE)
+    # https://github.com/filipw/dotnet-script : 
+    # choco install dotnet.script 
+    # or 
+    # dotnet tool install -g dotnet-script (preferred)
+    out <- system(sprintf('dotnet script %s', paste(f, options$engine.opts)), intern=TRUE)
   }
   # spit back stuff to the user
   engine_output(options, options$code, out)
@@ -259,10 +267,17 @@ knitr::knit_engines$set(dotnet=eng_dotnet)
 ```dotnet
 var i = 1;
 i++;
-Console.WriteLine(i);
-Console.WriteLine(i);
-Console.WriteLine(i);
-Console.WriteLine(i);
+Console.WriteLine(i++);
+Console.WriteLine(++i);
+Console.WriteLine(i--);
+Console.WriteLine(--i);
+```
+
+```
+2
+4
+4
+2
 ```
 
 5. Demo's

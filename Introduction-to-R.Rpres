@@ -245,6 +245,25 @@ Console.WriteLine(i--);
 Console.WriteLine(--i);
 ```
 
+4.2 basic types (.NET)
+========================================================
+```{r dotnet-ex2, engine='dotnet', eval=TRUE, echo=TRUE}
+Console.WriteLine(1);
+Console.WriteLine(true);
+enum Color {Red, Green, Blue};  
+Console.WriteLine(Color.Red);
+Console.WriteLine("hello world?");
+```
+
+4.2 basic types (R)
+========================================================
+```{r}
+1;
+T;
+as.factor(c('Red','Green','Blue'))[1];
+"hello world?"
+```
+
 5. Demo's
 ========================================================
   * supply chain analysis : 

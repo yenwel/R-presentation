@@ -250,18 +250,37 @@ Console.WriteLine(--i);
 ```{r dotnet-ex2, engine='dotnet', eval=TRUE, echo=TRUE}
 Console.WriteLine(1);
 Console.WriteLine(true);
+Console.WriteLine("hello world?");
 enum Color {Red, Green, Blue};  
 Console.WriteLine(Color.Red);
-Console.WriteLine("hello world?");
 ```
 
 4.2 basic types (R)
 ========================================================
 ```{r}
-1;
-T;
+1
+2.0
+T
+'hello world?'
 as.factor(c('Red','Green','Blue'))[1];
-"hello world?"
+as.ordered(c('Best','Bester','Bestest'))[1];
+```
+
+4.2 collections and composite types (.NET)
+========================================================
+```{r dotnet-ex3, engine='dotnet', eval=TRUE, echo=TRUE}  
+Console.WriteLine(new [] { 1 , 2 , 3}[1]);
+Console.WriteLine(new List<object> { "Fred" , 20}[0]);
+Console.WriteLine(new Dictionary<string,object>{{"name","Fred"},{"age",20}}["name"]);
+Console.WriteLine(new { Name = "Fred", Age = 20});
+```
+
+4.2 composite and types (R)
+========================================================
+```{r}
+c(1,2,3)
+matrix(1:9, nrow=3,ncol=3)
+list(name="Fred",  age=20)
 ```
 
 5. Demo's

@@ -1164,15 +1164,15 @@ Console.WriteLine(--i);
 <div class="slideContent" >
 <pre><code class="dotnet">Console.WriteLine(1);
 Console.WriteLine(true);
+Console.WriteLine(&quot;hello world?&quot;);
 enum Color {Red, Green, Blue};  
 Console.WriteLine(Color.Red);
-Console.WriteLine(&quot;hello world?&quot;);
 </code></pre>
 
 <pre><code>1
 True
-Red
 hello world?
+Red
 </code></pre>
 
 </div>
@@ -1181,16 +1181,28 @@ hello world?
 <section data-transition="linear" data-transition-speed="default">
 <h3>4.2 basic types (R)</h3>
 <div class="slideContent" >
-<pre><code class="r">1;
+<pre><code class="r">1
 </code></pre>
 
 <pre><code>[1] 1
 </code></pre>
 
-<pre><code class="r">T;
+<pre><code class="r">2.0
+</code></pre>
+
+<pre><code>[1] 2
+</code></pre>
+
+<pre><code class="r">T
 </code></pre>
 
 <pre><code>[1] TRUE
+</code></pre>
+
+<pre><code class="r">&#39;hello world?&#39;
+</code></pre>
+
+<pre><code>[1] &quot;hello world?&quot;
 </code></pre>
 
 <pre><code class="r">as.factor(c(&#39;Red&#39;,&#39;Green&#39;,&#39;Blue&#39;))[1];
@@ -1200,10 +1212,60 @@ hello world?
 Levels: Blue Green Red
 </code></pre>
 
-<pre><code class="r">&quot;hello world?&quot;
+<pre><code class="r">as.ordered(c(&#39;Best&#39;,&#39;Bester&#39;,&#39;Bestest&#39;))[1];
 </code></pre>
 
-<pre><code>[1] &quot;hello world?&quot;
+<pre><code>[1] Best
+Levels: Best &lt; Bester &lt; Bestest
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>4.2 collections and composite types (.NET)</h3>
+<div class="slideContent" >
+<pre><code class="dotnet">Console.WriteLine(new [] { 1 , 2 , 3}[1]);
+Console.WriteLine(new List&lt;object&gt; { &quot;Fred&quot; , 20}[0]);
+Console.WriteLine(new Dictionary&lt;string,object&gt;{{&quot;name&quot;,&quot;Fred&quot;},{&quot;age&quot;,20}}[&quot;name&quot;]);
+Console.WriteLine(new { Name = &quot;Fred&quot;, Age = 20});
+</code></pre>
+
+<pre><code>2
+Fred
+Fred
+{ Name = Fred, Age = 20 }
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>4.2 composite and types (R)</h3>
+<div class="slideContent" >
+<pre><code class="r">c(1,2,3)
+</code></pre>
+
+<pre><code>[1] 1 2 3
+</code></pre>
+
+<pre><code class="r">matrix(1:9, nrow=3,ncol=3)
+</code></pre>
+
+<pre><code>     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+</code></pre>
+
+<pre><code class="r">list(name=&quot;Fred&quot;,  age=20)
+</code></pre>
+
+<pre><code>$name
+[1] &quot;Fred&quot;
+
+$age
+[1] 20
 </code></pre>
 
 </div>

@@ -286,23 +286,23 @@ Console.WriteLine(--i);
 ```dotnet
 Console.WriteLine(1);
 Console.WriteLine(true);
+Console.WriteLine("hello world?");
 enum Color {Red, Green, Blue};  
 Console.WriteLine(Color.Red);
-Console.WriteLine("hello world?");
 ```
 
 ```
 1
 True
-Red
 hello world?
+Red
 ```
 
 4.2 basic types (R)
 ========================================================
 
 ```r
-1;
+1
 ```
 
 ```
@@ -310,11 +310,27 @@ hello world?
 ```
 
 ```r
-T;
+2.0
+```
+
+```
+[1] 2
+```
+
+```r
+T
 ```
 
 ```
 [1] TRUE
+```
+
+```r
+'hello world?'
+```
+
+```
+[1] "hello world?"
 ```
 
 ```r
@@ -327,11 +343,63 @@ Levels: Blue Green Red
 ```
 
 ```r
-"hello world?"
+as.ordered(c('Best','Bester','Bestest'))[1];
 ```
 
 ```
-[1] "hello world?"
+[1] Best
+Levels: Best < Bester < Bestest
+```
+
+4.2 collections and composite types (.NET)
+========================================================
+
+```dotnet
+Console.WriteLine(new [] { 1 , 2 , 3}[1]);
+Console.WriteLine(new List<object> { "Fred" , 20}[0]);
+Console.WriteLine(new Dictionary<string,object>{{"name","Fred"},{"age",20}}["name"]);
+Console.WriteLine(new { Name = "Fred", Age = 20});
+```
+
+```
+2
+Fred
+Fred
+{ Name = Fred, Age = 20 }
+```
+
+4.2 composite and types (R)
+========================================================
+
+```r
+c(1,2,3)
+```
+
+```
+[1] 1 2 3
+```
+
+```r
+matrix(1:9, nrow=3,ncol=3)
+```
+
+```
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+```
+
+```r
+list(name="Fred",  age=20)
+```
+
+```
+$name
+[1] "Fred"
+
+$age
+[1] 20
 ```
 
 5. Demo's

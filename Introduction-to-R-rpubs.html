@@ -793,6 +793,8 @@ x + 1
 <li>reflection (code is data)</li>
 <li>dynamic (if it quacks like a duck)</li>
 <li>abstract away underlying system (for domain experts)</li>
+<li>backed by fast C++, C or Fortran libraries</li>
+<li>column oriented data structure (APL influence) </li>
 </ul>
 
 </div>
@@ -1160,7 +1162,7 @@ Console.WriteLine(--i);
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>4.2 basic types (.NET)</h3>
+<h3>4.2 Basic types (.NET)</h3>
 <div class="slideContent" >
 <pre><code class="dotnet">Console.WriteLine(1);
 Console.WriteLine(true);
@@ -1179,7 +1181,7 @@ Red
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>4.2 basic types (R)</h3>
+<h3>4.2 Basic types (R)</h3>
 <div class="slideContent" >
 <pre><code class="r">1
 </code></pre>
@@ -1223,7 +1225,7 @@ Levels: Best &lt; Bester &lt; Bestest
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>4.2 collections and composite types (.NET)</h3>
+<h3>4.2 Collections and composite types (.NET)</h3>
 <div class="slideContent" >
 <pre><code class="dotnet">Console.WriteLine(new [] { 1 , 2 , 3}[1]);
 Console.WriteLine(new List&lt;object&gt; { &quot;Fred&quot; , 20}[0]);
@@ -1241,7 +1243,7 @@ Fred
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>4.2 composite and types (R)</h3>
+<h3>4.2 Collections and composite types (R)</h3>
 <div class="slideContent" >
 <pre><code class="r">c(1,2,3)
 </code></pre>
@@ -1268,6 +1270,75 @@ $age
 [1] 20
 </code></pre>
 
+<pre><code class="r"># R has at least three ways to do OO (S3, S4, Reference class) but don&#39;t bother do FP rather
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>4.2 Collections and composite types (R)</h3>
+<div class="slideContent" >
+<pre><code class="r">array(1:16,dim = c(2,2,2,2))[,,2,2]
+</code></pre>
+
+<pre><code>     [,1] [,2]
+[1,]   13   15
+[2,]   14   16
+</code></pre>
+
+<pre><code class="r">data.frame(name = c(&quot;Buddy&quot;, &quot;Lisa&quot;), age = c(10, 38), sex = as.factor(c(&quot;m&quot;,&quot;f&quot;)))
+</code></pre>
+
+<pre><code>   name age sex
+1 Buddy  10   m
+2  Lisa  38   f
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>4.2 Functions (.NET)</h3>
+<div class="slideContent" >
+<pre><code class="dotnet">Func&lt;int,int&gt; myF = (int x) =&gt; x + 1;
+Console.WriteLine(myF);
+Console.WriteLine(myF(1));
+Console.WriteLine(new [] {1 , 2 , 3 , 4}.Select(myF).FirstOrDefault());
+</code></pre>
+
+<pre><code>System.Func`2[System.Int32,System.Int32]
+2
+2
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>4.2 Functions (R)</h3>
+<div class="slideContent" >
+<pre><code class="r">myF &lt;- function(x) { x+1 }
+myF
+</code></pre>
+
+<pre><code>function(x) { x+1 }
+</code></pre>
+
+<pre><code class="r">myF(1)
+</code></pre>
+
+<pre><code>[1] 2
+</code></pre>
+
+<pre><code class="r">apply(matrix(c(1,2,3,4),2,2),1,myF)
+</code></pre>
+
+<pre><code>     [,1] [,2]
+[1,]    2    3
+[2,]    4    5
+</code></pre>
+
 </div>
 
 </section>
@@ -1282,6 +1353,8 @@ $age
 <li><a href="https://github.com/yenwel/supplychainplanning">https://github.com/yenwel/supplychainplanning</a></li>
 </ul></li>
 <li>shiny app connecting to database: <a href="https://github.com/yenwel/shinyDatabaseExplorer">https://github.com/yenwel/shinyDatabaseExplorer</a></li>
+<li>analyse load tests (connect to db): <a href="https://github.com/yenwel/analyse-neustar-loadtest">https://github.com/yenwel/analyse-neustar-loadtest</a></li>
+<li>process IIS Url Rewrite xml: <a href="https://github.com/yenwel/processsUrlRewrite">https://github.com/yenwel/processsUrlRewrite</a></li>
 <li>this presentation: <a href="https://github.com/yenwel/R-presentation">https://github.com/yenwel/R-presentation</a></li>
 </ul>
 

@@ -32,6 +32,8 @@ LISP -> Scheme -> S -> R (cfr Ecmascript)
  * reflection (code is data)
  * dynamic (if it quacks like a duck)
  * abstract away underlying system (for domain experts)
+ * backed by fast C++, C or Fortran libraries
+ * column oriented data structure (APL influence) 
  
 
 0.2 Origins in LISP (demo)
@@ -280,7 +282,7 @@ Console.WriteLine(--i);
 2
 ```
 
-4.2 basic types (.NET)
+4.2 Basic types (.NET)
 ========================================================
 
 ```dotnet
@@ -298,7 +300,7 @@ hello world?
 Red
 ```
 
-4.2 basic types (R)
+4.2 Basic types (R)
 ========================================================
 
 ```r
@@ -351,7 +353,7 @@ as.ordered(c('Best','Bester','Bestest'))[1];
 Levels: Best < Bester < Bestest
 ```
 
-4.2 collections and composite types (.NET)
+4.2 Collections and composite types (.NET)
 ========================================================
 
 ```dotnet
@@ -368,7 +370,7 @@ Fred
 { Name = Fred, Age = 20 }
 ```
 
-4.2 composite and types (R)
+4.2 Collections and composite types (R)
 ========================================================
 
 ```r
@@ -402,12 +404,87 @@ $age
 [1] 20
 ```
 
+```r
+# R has at least three ways to do OO (S3, S4, Reference class) but don't bother do FP rather
+```
+
+4.2 Collections and composite types (R)
+========================================================
+
+```r
+array(1:16,dim = c(2,2,2,2))[,,2,2]
+```
+
+```
+     [,1] [,2]
+[1,]   13   15
+[2,]   14   16
+```
+
+```r
+data.frame(name = c("Buddy", "Lisa"), age = c(10, 38), sex = as.factor(c("m","f")))
+```
+
+```
+   name age sex
+1 Buddy  10   m
+2  Lisa  38   f
+```
+
+4.2 Functions (.NET)
+========================================================
+
+```dotnet
+Func<int,int> myF = (int x) => x + 1;
+Console.WriteLine(myF);
+Console.WriteLine(myF(1));
+Console.WriteLine(new [] {1 , 2 , 3 , 4}.Select(myF).FirstOrDefault());
+```
+
+```
+System.Func`2[System.Int32,System.Int32]
+2
+2
+```
+
+4.2 Functions (R)
+========================================================
+
+```r
+myF <- function(x) { x+1 }
+myF
+```
+
+```
+function(x) { x+1 }
+```
+
+```r
+myF(1)
+```
+
+```
+[1] 2
+```
+
+```r
+apply(matrix(c(1,2,3,4),2,2),1,myF)
+```
+
+```
+     [,1] [,2]
+[1,]    2    3
+[2,]    4    5
+```
+
 5. Demo's
 ========================================================
   * supply chain analysis : 
     * https://github.com/yenwel/SCOperationsInventory
     * https://github.com/yenwel/supplychainplanning
   * shiny app connecting to database: https://github.com/yenwel/shinyDatabaseExplorer
+  * analyse load tests (connect to db): https://github.com/yenwel/analyse-neustar-loadtest
+  * process IIS Url Rewrite xml: https://github.com/yenwel/processsUrlRewrite
   * this presentation: https://github.com/yenwel/R-presentation
 
 5.1 Shiny App

@@ -491,6 +491,7 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
   * analyse load tests (connect to db): https://github.com/yenwel/analyse-neustar-loadtest
   * process IIS Url Rewrite xml: https://github.com/yenwel/processsUrlRewrite
   * this presentation: https://github.com/yenwel/R-presentation
+  * An R-package for the knitr dotnet engine: https://github.com/yenwel/Rpresdotnetengine
 
 5.1 Shiny App
 ========================================================

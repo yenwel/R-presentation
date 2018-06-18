@@ -158,7 +158,12 @@ http://blog.revolutionanalytics.com/2015/06/using-hadoop-with-r-it-depends.html
 R one of the languages on Apache Spark (besides Scala and Python)
 ![alt text](Introduction-to-R-figure/databricks.png "databricks")
 
-2.10 Certification as a Data Scientist
+2.10 In minecraft
+========================================================
+![alt text](Introduction-to-R-figure/Rminecraft.png "Rminecraft")
+https://ropenscilabs.github.io/miner_book/
+
+2.11 Certification as a Data Scientist
 ========================================================
 ![alt text](Introduction-to-R-figure/Certification.png "Certification")
 

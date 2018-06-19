@@ -251,6 +251,7 @@ deep neural networks, more data and faster hardware (GPU)
 
 * Basic statistics : https://www.itl.nist.gov/div898/handbook/
 * Machine learning : https://dzone.com/articles/35-free-online-books-machine
+* https://www.kdnuggets.com/
 
 3.13 Level I in Causal hierarchy
 ========================================================
@@ -381,7 +382,7 @@ as.ordered(c('Best','Bester','Bestest'))[1];
 Levels: Best < Bester < Bestest
 ```
 
-4.2 Collections and composite types (.NET)
+4.3 Collections and composite types (.NET)
 ========================================================
 
 ```dotnet
@@ -398,7 +399,7 @@ Fred
 { Name = Fred, Age = 20 }
 ```
 
-4.2 Collections and composite types (R)
+4.3 Collections and composite types (R)
 ========================================================
 
 ```r
@@ -436,7 +437,7 @@ $age
 # R has at least three ways to do OO (S3, S4, Reference class) but don't bother do FP rather
 ```
 
-4.2 Collections and composite types (R)
+4.3 Collections and composite types (R)
 ========================================================
 
 ```r
@@ -459,7 +460,7 @@ data.frame(name = c("Buddy", "Lisa"), age = c(10, 38), sex = as.factor(c("m","f"
 2  Lisa  38   f
 ```
 
-4.2 Functions (.NET)
+4.4 Functions (.NET)
 ========================================================
 
 ```dotnet
@@ -475,7 +476,7 @@ System.Func`2[System.Int32,System.Int32]
 2
 ```
 
-4.2 Functions (R)
+4.4 Functions (R)
 ========================================================
 
 ```r
@@ -504,6 +505,16 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
 [1,]    2    3
 [2,]    4    5
 ```
+
+4.2 Deep dive into R
+========================================================
+
+start here:
+* https://www.statmethods.net/
+* https://www.r-bloggers.com/
+* https://www.datacamp.com/
+
+than google (CRAN because R is to confusing for google)
 
 5. Demo's
 ========================================================

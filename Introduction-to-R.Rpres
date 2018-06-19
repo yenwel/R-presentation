@@ -225,6 +225,7 @@ deep neural networks, more data and faster hardware (GPU)
 
 * Basic statistics : https://www.itl.nist.gov/div898/handbook/
 * Machine learning : https://dzone.com/articles/35-free-online-books-machine
+* https://www.kdnuggets.com/
 
 3.13 Level I in Causal hierarchy
 ========================================================
@@ -296,7 +297,7 @@ as.factor(c('Red','Green','Blue'))[1];
 as.ordered(c('Best','Bester','Bestest'))[1];
 ```
 
-4.2 Collections and composite types (.NET)
+4.3 Collections and composite types (.NET)
 ========================================================
 ```{r dotnet-ex3, engine='dotnet', eval=TRUE, echo=TRUE}  
 Console.WriteLine(new [] { 1 , 2 , 3}[1]);
@@ -305,7 +306,7 @@ Console.WriteLine(new Dictionary<string,object>{{"name","Fred"},{"age",20}}["nam
 Console.WriteLine(new { Name = "Fred", Age = 20});
 ```
 
-4.2 Collections and composite types (R)
+4.3 Collections and composite types (R)
 ========================================================
 ```{r}
 c(1,2,3)
@@ -314,14 +315,14 @@ list(name="Fred",  age=20)
 # R has at least three ways to do OO (S3, S4, Reference class) but don't bother do FP rather
 ```
 
-4.2 Collections and composite types (R)
+4.3 Collections and composite types (R)
 ========================================================
 ```{r}
 array(1:16,dim = c(2,2,2,2))[,,2,2]
 data.frame(name = c("Buddy", "Lisa"), age = c(10, 38), sex = as.factor(c("m","f")))
 ```
 
-4.2 Functions (.NET)
+4.4 Functions (.NET)
 ========================================================
 ```{r dotnet-ex4, engine='dotnet', eval=TRUE, echo=TRUE}
 Func<int,int> myF = (int x) => x + 1;
@@ -330,7 +331,7 @@ Console.WriteLine(myF(1));
 Console.WriteLine(new [] {1 , 2 , 3 , 4}.Select(myF).FirstOrDefault());
 ```
 
-4.2 Functions (R)
+4.4 Functions (R)
 ========================================================
 ```{r}
 myF <- function(x) { x+1 }
@@ -338,6 +339,16 @@ myF
 myF(1)
 apply(matrix(c(1,2,3,4),2,2),1,myF)
 ```
+
+4.2 Deep dive into R
+========================================================
+
+start here:
+* https://www.statmethods.net/
+* https://www.r-bloggers.com/
+* https://www.datacamp.com/
+
+than google (CRAN because R is to confusing for google)
 
 5. Demo's
 ========================================================

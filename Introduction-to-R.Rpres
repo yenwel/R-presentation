@@ -175,20 +175,29 @@ Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical element.
 
 ![alt text](Introduction-to-R-figure/residual.png "residual")![alt text](Introduction-to-R-figure/errorterm2.jpg "errorterm")
 
-3.6 Error types
+3.6 Error types : hypothesis testing
 ========================================================
 
 ![alt text](Introduction-to-R-figure/errortypes.png "errortypes")
+
+* type I : incorrectly detect effect when there is none (bias, noise...) : overfitting
+* type II : incorrectly detect no effect (0 hypothesis) when there is an effect : underfitting
+
+Programming = mathematical proof testen (https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence)
 
 3.7 Information = Variance
 ========================================================
 
 ![alt text](Introduction-to-R-figure/varianceisinformation1.png "variance1")
 
+we train our model and test/validate it on the same data
+
 3.7 Information = Variance
 ========================================================
 
 ![alt text](Introduction-to-R-figure/varianceisinformation2.png "variance2")
+
+How related is our training, test our validation data subset? Idempotency of our model.
 
 3.8 Big data - Central Limit Theorem
 ========================================================
@@ -196,11 +205,15 @@ Larger sample size: more normal distribution
 
 ![alt text](Introduction-to-R-figure/IllustrationCentralTheorem.png "IllustrationCentralTheorem")
 
+with more data, we need less assumptions of underlying error term
+
 
 3.9 Big data - Power increases with sample size
 ========================================================
 
 ![alt text](Introduction-to-R-figure/statisticalpower.jpg "statisticalpower")
+
+Power is chance that our model will correctly detect an effect. Power will decrease with more features in our model. Power will increase with larger sample size for our model.
 
 
 3.10 Big data - Data is the new oil
@@ -350,7 +363,7 @@ start here:
 * https://www.r-bloggers.com/
 * https://www.datacamp.com/
 
-than google (CRAN because R is to confusing for google)
+then google (CRAN because R is to confusing for google)
 
 5. Demo's
 ========================================================

@@ -110,6 +110,7 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
 2.1 Microsoft R Open (R extension)
 ========================================================
 Improved some pittfals of typical R distribution (single threaded, standardization of packages and models, object orientation...) CRAN
+
 (see Typescript)
 
 ![alt text](Introduction-to-R-figure/ClarkHead.png "MRO")
@@ -121,6 +122,7 @@ Client/Server
 Operationalizing R 
   * DeployR
   * ScaleR
+
 Now also python
 
 2.3 Microsoft R Archive Network (MRAN)
@@ -131,6 +133,7 @@ https://mran.microsoft.com/
 2.4 R in SQL Server
 ========================================================
 Machine learning services in SQL Server
+
 ![alt text](Introduction-to-R-figure/SQLServerR.png "SQLServerR")
 
 2.5 R in visual studio
@@ -151,16 +154,19 @@ Visualization with R? PowerBIR?? (jk :p)
 2.8 Azure HDInsight (hadoop as a service)
 ========================================================
 ![alt text](Introduction-to-R-figure/hdinsights.png "hdinsights")
+
 http://blog.revolutionanalytics.com/2015/06/using-hadoop-with-r-it-depends.html
 
 2.9 Azure Databricks (spark as a service)
 ========================================================
 R one of the languages on Apache Spark (besides Scala and Python)
+
 ![alt text](Introduction-to-R-figure/databricks.png "databricks")
 
 2.10 In minecraft
 ========================================================
 ![alt text](Introduction-to-R-figure/Rminecraft.png "Rminecraft")
+
 https://ropenscilabs.github.io/miner_book/
 
 2.11 Certification as a Data Scientist
@@ -227,7 +233,7 @@ Larger sample size: more normal distribution
 Conclusion: the more (quality) data, the better for our models
 
 ![alt text](Introduction-to-R-figure/dataoil.png "dataoil")
-r
+
 New headaches: Horizontal scalability, distributed systems, CAP theoreum ...
 
 
@@ -238,6 +244,23 @@ deep neural networks, more data and faster hardware (GPU)
 ![alt text](Introduction-to-R-figure/deeplearning.png "deeplearning")
 
 > When in doubt use brute force ~ Ken Thompson
+
+
+3.12 Deep dive theoretical
+========================================================
+
+* Basic statistics : https://www.itl.nist.gov/div898/handbook/
+* Machine learning : https://dzone.com/articles/35-free-online-books-machine
+
+3.13 Level I in Causal hierarchy
+========================================================
+
+![alt text](Introduction-to-R-figure/levelcausalhierarchy.pdf.png "causalhierarchy")
+
+https://arxiv.org/pdf/1801.04016.pdf
+
+https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/
+
 
 4. R for the .NET programmer
 ========================================================

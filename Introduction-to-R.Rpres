@@ -1,7 +1,7 @@
 Introduction to R
 ========================================================
 author: Jan Vandepitte
-date: 
+date: 30 August 2018
 autosize: true
 ---
 
@@ -29,6 +29,8 @@ LISP -> Scheme -> S -> R (cfr Ecmascript)
  * abstract away underlying system (for domain experts)
  * backed by fast C++, C or Fortran libraries
  * column oriented data structure (APL influence) 
+ 
+ http://paulgraham.com/icad.html
  
 
 0.2 Origins in LISP (demo)

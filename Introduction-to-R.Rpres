@@ -11,7 +11,7 @@ autosize: true
 0. What is R
 ========================================================
 
-  * Open source Script language for statistical programming  * 
+  * Open source Script language for statistical programming 
   * data preparation, machine learning, experimentation, visualization (presentation, notebook, shiny dashboard)
   * packaging system (CRAN) like nuget, npm
 ```{r}

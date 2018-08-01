@@ -287,6 +287,11 @@ https://arxiv.org/pdf/1801.04016.pdf
 
 https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/
 
+3.15 Simpson paradox
+========================================================
+
+![alt text](Introduction-to-R-figure/simpsons.png "simpson paradox")
+
 
 4. R for the .NET programmer
 ========================================================

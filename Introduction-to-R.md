@@ -261,14 +261,24 @@ deep neural networks, more data and faster hardware (GPU)
 > When in doubt use brute force ~ Ken Thompson
 
 
-3.12 Deep dive theoretical
+3.12 Deep learning
+========================================================
+
+Renewed interest so some interesting developments
+* Auto-encoder (encoder-decoder chained learned with internal representation)
+* SEQ2SEQ (arbitrary size representation for e.g. NLP)
+* Representation learning (less feature engineering)
+* Theoretical framework (category theory): a new way of programming but with linear algebra
+http://colah.github.io/posts/2015-09-NN-Types-FP/
+
+3.13 Deep dive theoretical
 ========================================================
 
 * Basic statistics : https://www.itl.nist.gov/div898/handbook/
 * Machine learning : https://dzone.com/articles/35-free-online-books-machine
 * https://www.kdnuggets.com/
 
-3.13 Level I in Causal hierarchy
+3.14 Level I in Causal hierarchy
 ========================================================
 
 ![alt text](Introduction-to-R-figure/levelcausalhierarchy.pdf.png "causalhierarchy")

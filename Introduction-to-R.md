@@ -536,7 +536,7 @@ apply(matrix(c(1,2,3,4),2,2),1,myF)
 [2,]    4    5
 ```
 
-4.2 Deep dive into R
+4.5 Deep dive into R
 ========================================================
 
 start here:
@@ -561,4 +561,34 @@ then google (CRAN because R is to confusing for google)
 ========================================================
 
 <iframe src="https://bovi-analytics.shinyapps.io/GplusEdata/" width="100%" height ="300%"></iframe>
+
+5.2.1 data mining bitcoin and twitter
+========================================================
+
+```r
+#http://beautifuldata.net/2015/01/querying-the-bitcoin-blockchain-with-r/
+library(Rbitcoin)
+trades <- market.api.process('kraken',c('BTC','EUR'),'trades')
+Rbitcoin.plot(trades, col='blue')
+```
+
+![plot of chunk unnamed-chunk-7](Introduction-to-R-figure/unnamed-chunk-7-1.png)
+
+5.2.2 data mining bitcoin and twitter
+========================================================
+
+```r
+#https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/use-twitter-api-r/
+library(rtweet)
+```
+
+5.2.3 datamining bitcoin and twitter
+========================================================
+
+```r
+#https://www.rdocumentation.org/packages/MSBVAR/versions/0.9-2/topics/granger.test
+#https://davegiles.blogspot.com/2012/11/granger-causality-testing-in-r.html
+```
+
+
 

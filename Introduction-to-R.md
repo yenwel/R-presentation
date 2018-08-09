@@ -322,6 +322,15 @@ eng_dotnet <- function(options) {
 }
 knitr::knit_engines$set(dotnet=eng_dotnet)
 ```
+4.0 Let's try out our R-package
+========================================================
+
+```r
+if (!requireNamespace("devtools", quietly = TRUE)) { install.packages("devtools") }
+devtools::install_github("yenwel/Rpresdotnetengine", force=T)
+library(Rpresdotnetengine)
+```
+
 4.1 Let's try out our new engine
 ========================================================
 
@@ -572,14 +581,33 @@ trades <- market.api.process('kraken',c('BTC','EUR'),'trades')
 Rbitcoin.plot(trades, col='blue')
 ```
 
-![plot of chunk unnamed-chunk-7](Introduction-to-R-figure/unnamed-chunk-7-1.png)
+![plot of chunk unnamed-chunk-8](Introduction-to-R-figure/unnamed-chunk-8-1.png)
 
 5.2.2 data mining bitcoin and twitter
 ========================================================
 
 ```r
 #https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/use-twitter-api-r/
+## install devtools package if it's not already
+#if (!requireNamespace("devtools", quietly = TRUE)) { install.packages("devtools") }
+## install dev version of rtweet from github
+#devtools::install_github("mkearney/rtweet")
+## load rtweet package
 library(rtweet)
+# these environment variables are set via an app you can make at https://developer.twitter.com/en/apps
+envvar <- Sys.getenv(c("TWT_R_APP", "TWT_R_API", "TWT_R_SECRET","TWT_R_XS_TOKEN","TWT_R_XS_SECRET"))
+appname <- envvar[1]
+key <- envvar[2]
+secret <- envvar[3]
+access_token <- envvar[4]
+access_secret <- envvar[5]
+## authenticate via access token
+token <- create_token(
+  app = appname, 
+  consumer_key = key, 
+  consumer_secret = secret, 
+  access_token = access_token, 
+  access_secret = access_secret)
 ```
 
 5.2.3 datamining bitcoin and twitter

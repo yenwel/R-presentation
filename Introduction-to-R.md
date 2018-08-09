@@ -608,6 +608,7 @@ token <- create_token(
   consumer_secret = secret, 
   access_token = access_token, 
   access_secret = access_secret)
+bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 50)
 ```
 
 5.2.3 datamining bitcoin and twitter

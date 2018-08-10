@@ -411,6 +411,10 @@ start here:
 
 then google (CRAN because R is to confusing for google)
 
+```{r}
+??something
+```
+
 5. Demo's
 ========================================================
   * supply chain analysis : 
@@ -466,6 +470,37 @@ bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 50)
 ```
 
 5.2.3 datamining bitcoin and twitter
+========================================================
+```{r}
+str(trades)
+```
+5.2.3 datamining bitcoin and twitter
+========================================================
+```{r}
+summary(trades)
+```
+5.2.3 datamining bitcoin and twitter
+========================================================
+```{r}
+summary(trades$trades)
+```
+5.2.3 datamining bitcoin and twitter
+========================================================
+```{r}
+str(bitcoin_tweets)
+```
+5.2.3 datamining bitcoin and twitter
+========================================================
+```{r}
+summary(bitcoin_tweets)
+```
+5.2.3 datamining bitcoin and twitter
+========================================================
+```{r}
+summary(bitcoin_tweets$created_at)
+```
+
+5.2.4 datamining bitcoin and twitter
 ========================================================
 ```{r}
 #https://www.rdocumentation.org/packages/MSBVAR/versions/0.9-2/topics/granger.test

@@ -1467,6 +1467,9 @@ myF
 
 <p>then google (CRAN because R is to confusing for google)</p>
 
+<pre><code class="r">??something
+</code></pre>
+
 </div>
 
 </section>
@@ -1507,7 +1510,7 @@ trades &lt;- market.api.process(&#39;kraken&#39;,c(&#39;BTC&#39;,&#39;EUR&#39;),
 Rbitcoin.plot(trades, col=&#39;blue&#39;)
 </code></pre>
 
-<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-13"/></p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAABTVBMVEUAAAAAADoAAGYAAP8AOjoAOmYAOpAAZrY6AAA6ADo6AGY6OgA6OmY6OpA6ZpA6ZrY6kLY6kNtmAABmADpmAGZmOgBmOjpmZgBmZmZmkJBmkLZmkNtmtpBmtttmtv+QOgCQOjqQOmaQZgCQZjqQZmaQkDqQkGaQtmaQtpCQttuQ29uQ2/+2ZgC2Zjq2kGa2ttu225C22/+2/7a2/9u2//+5ubm5uce5udW5x9W5x+O51eO51fHHucfHx8fHx+PH1fHH4/HH4//T09PVucfVx7nVx8fVx9XV1cfV49XV8f/bkDrbtmbbtpDb25Db2//b/7bb/9vb///jx7njx8fj1bnj1cfj48fj49Xj8f/j//Hj///x1bnx1cfx48fx49Xx4/Hx8ePx8fHx8f/x////tmb/tpD/25D/27b/48f/8dX//7b//9v//+P///H////GBzeoAAAACXBIWXMAAAsSAAALEgHS3X78AAAYwUlEQVR4nO2d/X/kxH3H5RN3dqA0sSF9SrEvpU+JnbS0hhwhCcENobfQ0oOSEO6SlsZdLt6i///HavQ80oxmRvM883m/XvbuSquvtHqvPtJod0dFBbKk8L0AwA8QnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykQnykxi787u3ctO3QcWxD++El1uGjuFcfVV39SFEffGcYdXbYlDhf3rrtBL3cVDz84Zxd98MTEC3JJpuKLB08G8fuT7g3AF190Yq8KiA8A4qc2c364OPqzk3tv7L9dFPcvh6HV4YcnxdFrjcC/OynuvzFMU1X79s2xP3nQbPnfelLtGt+dv6l4cu+r9unNW+WYnlt1eL04+ksyYT+76n9fKvq5BUzk4v/5onitFfLg47N20+yH1psn4bTP9ON+muvOeHfT3j+8/lolK346t654PWE/u7uzSUSES+Ti/7Re00RIa7XZkvuhtdA3GmX16NPqw07FEOfN04nzW/LkajKuee/Mor6rT6Kentv+5N5lHRcPngyz695UoRO3+FrJOTHUeDx89NcvFZ2reuht0SluRvdbc2/y/hD1EuLvf697Rit+Ordb8i4gxSezK4oX/uLf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" alt="plot of chunk unnamed-chunk-14"/></p>
 
 </div>
 
@@ -1539,6 +1542,2519 @@ bitcoin_tweets &lt;- search_tweets(q = &quot;#bitcoin&quot;, n = 50)
 </section>
 <section data-transition="linear" data-transition-speed="default">
 <h3>5.2.3 datamining bitcoin and twitter</h3>
+<div class="slideContent" >
+<pre><code class="r">str(trades)
+</code></pre>
+
+<pre><code>List of 6
+ $ market          : chr &quot;kraken&quot;
+ $ base            : chr &quot;BTC&quot;
+ $ quote           : chr &quot;EUR&quot;
+ $ timestamp       : POSIXct[1:1], format: &quot;2018-08-10 12:54:32&quot;
+ $ market_timestamp: POSIXct[1:1], format: NA
+ $ trades          :Classes &#39;data.table&#39; and &#39;data.frame&#39;:  1000 obs. of  5 variables:
+  ..$ date  : POSIXct[1:1000], format: &quot;2018-08-10 09:26:13&quot; ...
+  ..$ price : num [1:1000] 5525 5525 5524 5522 5520 ...
+  ..$ amount: num [1:1000] 0.25 0.0135 0.01 0.05 0.022 ...
+  ..$ tid   : chr [1:1000] NA NA NA NA ...
+  ..$ type  : chr [1:1000] &quot;ask&quot; &quot;ask&quot; &quot;ask&quot; &quot;ask&quot; ...
+  ..- attr(*, &quot;.internal.selfref&quot;)=&lt;externalptr&gt; 
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>5.2.3 datamining bitcoin and twitter</h3>
+<div class="slideContent" >
+<pre><code class="r">summary(trades)
+</code></pre>
+
+<pre><code>                 Length Class      Mode     
+market           1      -none-     character
+base             1      -none-     character
+quote            1      -none-     character
+timestamp        1      POSIXct    numeric  
+market_timestamp 1      POSIXct    numeric  
+trades           5      data.table list     
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>5.2.3 datamining bitcoin and twitter</h3>
+<div class="slideContent" >
+<pre><code class="r">summary(trades$trades)
+</code></pre>
+
+<pre><code>      date                         price          amount        
+ Min.   :2018-08-10 09:26:13   Min.   :5520   Min.   : 0.00000  
+ 1st Qu.:2018-08-10 09:40:06   1st Qu.:5546   1st Qu.: 0.00500  
+ Median :2018-08-10 10:02:02   Median :5555   Median : 0.02501  
+ Mean   :2018-08-10 10:05:48   Mean   :5553   Mean   : 0.23682  
+ 3rd Qu.:2018-08-10 10:30:28   3rd Qu.:5560   3rd Qu.: 0.17526  
+ Max.   :2018-08-10 10:54:27   Max.   :5583   Max.   :14.03073  
+     tid                type          
+ Length:1000        Length:1000       
+ Class :character   Class :character  
+ Mode  :character   Mode  :character  
+
+
+
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>5.2.3 datamining bitcoin and twitter</h3>
+<div class="slideContent" >
+<pre><code class="r">str(bitcoin_tweets)
+</code></pre>
+
+<pre><code>Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:   40 obs. of  88 variables:
+ $ user_id                : chr  &quot;924026919993139200&quot; &quot;411525843&quot; &quot;971504962739036161&quot; &quot;885224342489096194&quot; ...
+ $ status_id              : chr  &quot;1027870729432256513&quot; &quot;1027870725330423808&quot; &quot;1027870717700972544&quot; &quot;1027870711237365761&quot; ...
+ $ created_at             : POSIXct, format: &quot;2018-08-10 10:54:13&quot; &quot;2018-08-10 10:54:12&quot; ...
+ $ screen_name            : chr  &quot;Blawksy&quot; &quot;cryptopank&quot; &quot;serhio_coin88&quot; &quot;1bitcoin2&quot; ...
+ $ text                   : chr  &quot;‘Game Over’: Wall Street Analyst Says #Bitcoin Must Not Breech Year-To-Date Support https://t.co/2KlXLuvUWr htt&quot;| __truncated__ &quot;Goldman Sachs May Store Bitcoin for Cryptocurrency Funds, Institutional Investors. The future of #crypto is loo&quot;| __truncated__ &quot;Aenco Co-founder @DarrenLui1 was live-stream interviewed on Facebook by Joe Blackburn, the founder and CEO of @&quot;| __truncated__ &quot;‘Game Over’: Wall Street Analyst Says #bitcoin Must Not Breech Year-To-Date Support https://t.co/Y7LLutvHZO&quot; ...
+ $ source                 : chr  &quot;dlvr.it&quot; &quot;Twitter Lite&quot; &quot;Twitter for Android&quot; &quot;dlvr.it&quot; ...
+ $ display_text_width     : num  107 140 139 107 69 69 119 140 272 140 ...
+ $ reply_to_status_id     : chr  NA NA NA NA ...
+ $ reply_to_user_id       : chr  NA NA NA NA ...
+ $ reply_to_screen_name   : chr  NA NA NA NA ...
+ $ is_quote               : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ is_retweet             : logi  FALSE TRUE TRUE FALSE FALSE FALSE ...
+ $ favorite_count         : int  0 0 0 0 0 0 0 0 0 0 ...
+ $ retweet_count          : int  0 1093 1555 0 0 0 0 78 0 5 ...
+ $ hashtags               :List of 40
+  ..$ : chr &quot;Bitcoin&quot;
+  ..$ : chr &quot;crypto&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;bitcoin&quot;
+  ..$ : chr &quot;bitcoin&quot;
+  ..$ : chr &quot;bitcoin&quot;
+  ..$ : chr  &quot;Bitcoin&quot; &quot;BTC&quot;
+  ..$ : chr &quot;Crypto&quot;
+  ..$ : chr  &quot;PoW&quot; &quot;PoS&quot; &quot;æternity&quot; &quot;Bitcoin&quot; ...
+  ..$ : chr  &quot;Bitcoin&quot; &quot;Crypto&quot; &quot;Airdrop&quot; &quot;eByte&quot; ...
+  ..$ : chr  &quot;eos&quot; &quot;crypto&quot; &quot;cryptocurrency&quot; &quot;bitcoin&quot; ...
+  ..$ : chr &quot;Bitcoin&quot;
+  ..$ : chr  &quot;tech&quot; &quot;cyber&quot; &quot;web&quot; &quot;php&quot; ...
+  ..$ : chr  &quot;blockchain&quot; &quot;cryptocurrency&quot; &quot;bitcoin&quot; &quot;ethereum&quot; ...
+  ..$ : chr &quot;Bitcoin&quot;
+  ..$ : chr &quot;Bitcoin&quot;
+  ..$ : chr  &quot;SocialRemit&quot; &quot;bitcoin&quot; &quot;cryptocurrency&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;blockchain&quot; &quot;cryptosystems&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;Bitcoin&quot;
+  ..$ : chr  &quot;bitcoin&quot; &quot;mining&quot; &quot;binance&quot; &quot;btc&quot; ...
+  ..$ : chr &quot;ULTRIX&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;blockchain&quot; &quot;cryptocurreny&quot; &quot;bitcoin&quot; &quot;litecoin&quot; ...
+  ..$ : chr  &quot;BITCOIN&quot; &quot;Crypto&quot;
+  ..$ : chr  &quot;PueblaFC&quot; &quot;Veracruz&quot; &quot;1xbit&quot; &quot;bitcoin&quot;
+  ..$ : chr  &quot;Bitcoin&quot; &quot;Blockchain&quot; &quot;Cryptocurrency&quot;
+  ..$ : chr  &quot;Infographic&quot; &quot;IoT&quot; &quot;Industry40&quot; &quot;CyberSecurity&quot; ...
+  ..$ : chr  &quot;crypto&quot; &quot;bitcoin&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;Bitcoin&quot;
+  ..$ : chr &quot;Crypto&quot;
+  ..$ : chr NA
+  ..$ : chr  &quot;ico&quot; &quot;airdrop&quot;
+  ..$ : chr  &quot;mining&quot; &quot;Fastcoin&quot; &quot;Emerald&quot; &quot;GameCredits&quot; ...
+  ..$ : chr &quot;bitcoin&quot;
+  ..$ : chr  &quot;crypto&quot; &quot;bitcoin&quot;
+ $ symbols                :List of 40
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;eos&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;BTC&quot; &quot;ETH&quot; &quot;XRP&quot; &quot;BCH&quot; ...
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+ $ urls_url               :List of 40
+  ..$ : chr &quot;s.blawks.com/QfR7W5&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;cointelegraph.com/news/game-over…&quot;
+  ..$ : chr &quot;dlvr.it/QfR7JW&quot;
+  ..$ : chr &quot;dlvr.it/QfR7F7&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;cryptosouk.io/en/ico&quot;
+  ..$ : chr &quot;bit.ly/2ME7B4g&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;twitter.com/p2psf/status/1…&quot;
+  ..$ : chr &quot;ift.tt/2OpkTTT&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;twitter.com/Socialremit_uk…&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;Cryptology.com&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;newsbtc.com/2018/08/10/5-r…&quot;
+  ..$ : chr &quot;twitter.com/EonToken/statu…&quot;
+  ..$ : chr &quot;bit.ly/2Oo1XEc&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;cryptosouk.io/en/ico&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;medium.com/localtokenexch…&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;ow.ly/EqK130llAwG&quot;
+  ..$ : chr NA
+ $ urls_t.co              :List of 40
+  ..$ : chr &quot;https://t.co/2KlXLuvUWr&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/Y7LLutvHZO&quot;
+  ..$ : chr &quot;https://t.co/V0vmoshMN7&quot;
+  ..$ : chr &quot;https://t.co/ujqCzqVjwn&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/onG1lV26QW&quot;
+  ..$ : chr &quot;https://t.co/V3TCO8BCs2&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/y1b2ilZitJ&quot;
+  ..$ : chr &quot;https://t.co/raXOl0Jjov&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/NfYtJTumcF&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/DicVX5Vpuz&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/5E13gs5uTQ&quot;
+  ..$ : chr &quot;https://t.co/NBIYHaLtKO&quot;
+  ..$ : chr &quot;https://t.co/T5ekWB9BLY&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/onG1lV26QW&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/iiWDR46bug&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/rK88CaFMcw&quot;
+  ..$ : chr NA
+ $ urls_expanded_url      :List of 40
+  ..$ : chr &quot;http://s.blawks.com/QfR7W5&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://cointelegraph.com/news/game-over-wall-street-analyst-says-bitcoin-must-not-breech-year-to-date-support?&quot;| __truncated__
+  ..$ : chr &quot;http://dlvr.it/QfR7JW&quot;
+  ..$ : chr &quot;http://dlvr.it/QfR7F7&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://cryptosouk.io/en/ico&quot;
+  ..$ : chr &quot;https://bit.ly/2ME7B4g&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/p2psf/status/1009391624873537536&quot;
+  ..$ : chr &quot;https://ift.tt/2OpkTTT&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/Socialremit_uk/status/1009541855355129857&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://Cryptology.com&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://www.newsbtc.com/2018/08/10/5-reasons-why-institutional-investors-are-entering-crypto/&quot;
+  ..$ : chr &quot;https://twitter.com/EonToken/status/1025220988227600385&quot;
+  ..$ : chr &quot;http://bit.ly/2Oo1XEc&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://cryptosouk.io/en/ico&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://medium.com/localtokenexchange/our-airdrop-campaign-is-in-full-swing-e15dfeed5edb&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;http://ow.ly/EqK130llAwG&quot;
+  ..$ : chr NA
+ $ media_url              :List of 40
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6-ybUwAISy5I.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO68sQV4AAcdLn.jpg&quot;
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO68hPU8AApnYX.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6oKOXcAAz6yO.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DjUluH8WwAEf53D.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkL3FMWX0AA179C.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6uW9U8AAhoQ5.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6plvWwAADsDW.jpg&quot;
+  ..$ : chr &quot;http://pbs.twimg.com/media/Dj0XH27U0AAKoKM.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkL3FMWX0AA179C.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkKzeFRX0AAYWuT.jpg&quot;
+  ..$ : chr &quot;http://pbs.twimg.com/media/Dj0XH27U0AAKoKM.jpg&quot;
+ $ media_t.co             :List of 40
+  ..$ : chr &quot;https://t.co/1ej7heQ26a&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/NPgEp4B1aF&quot;
+  ..$ : chr &quot;https://t.co/iX7DU9hiE0&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/RHbCUBPAAK&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/wcG7ZJPOXf&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/z1BhrD5BkT&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/DB9XsEovH7&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/y8dtnAtvuP&quot;
+  ..$ : chr &quot;https://t.co/NJDmhy16SL&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/z1BhrD5BkT&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/Uc0J6R5As3&quot;
+  ..$ : chr &quot;https://t.co/NJDmhy16SL&quot;
+ $ media_expanded_url     :List of 40
+  ..$ : chr &quot;https://twitter.com/Blawksy/status/1027870729432256513/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/feeloox1/status/1027870693742899202/photo/1&quot;
+  ..$ : chr &quot;https://twitter.com/BitcoinCoreNews/status/1027870690735603712/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/CryptoKeeper888/status/1027870642664878080/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/BTCTN/status/1023765966642139136/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/Xentagz/status/1027655343936098310/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/1xbit_es/status/1027870447638011904/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/hudson_chatbots/status/1027870431045410816/photo/1&quot;
+  ..$ : chr &quot;https://twitter.com/TheCryptoLark/status/1026001914570334214/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/Xentagz/status/1027655343936098310/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/CNBC/status/1027580996739362817/photo/1&quot;
+  ..$ : chr &quot;https://twitter.com/TheCryptoLark/status/1026001914570334214/photo/1&quot;
+ $ media_type             :List of 40
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;photo&quot;
+  ..$ : chr &quot;photo&quot;
+ $ ext_media_url          :List of 40
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6-ybUwAISy5I.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO68sQV4AAcdLn.jpg&quot;
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO68hPU8AApnYX.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;http://pbs.twimg.com/media/DkO6oKOXcAAz6yO.jpg&quot; &quot;http://pbs.twimg.com/media/DkO6pZSX4AAqi_O.jpg&quot; &quot;http://pbs.twimg.com/media/DkO6qbwXoAAAg2e.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DjUluH8WwAEf53D.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkL3FMWX0AA179C.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6uW9U8AAhoQ5.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkO6plvWwAADsDW.jpg&quot;
+  ..$ : chr &quot;http://pbs.twimg.com/media/Dj0XH27U0AAKoKM.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkL3FMWX0AA179C.jpg&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;http://pbs.twimg.com/media/DkKzeFRX0AAYWuT.jpg&quot;
+  ..$ : chr &quot;http://pbs.twimg.com/media/Dj0XH27U0AAKoKM.jpg&quot;
+ $ ext_media_t.co         :List of 40
+  ..$ : chr &quot;https://t.co/1ej7heQ26a&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/NPgEp4B1aF&quot;
+  ..$ : chr &quot;https://t.co/iX7DU9hiE0&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;https://t.co/RHbCUBPAAK&quot; &quot;https://t.co/RHbCUBPAAK&quot; &quot;https://t.co/RHbCUBPAAK&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/wcG7ZJPOXf&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/z1BhrD5BkT&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/DB9XsEovH7&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/y8dtnAtvuP&quot;
+  ..$ : chr &quot;https://t.co/NJDmhy16SL&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/z1BhrD5BkT&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://t.co/Uc0J6R5As3&quot;
+  ..$ : chr &quot;https://t.co/NJDmhy16SL&quot;
+ $ ext_media_expanded_url :List of 40
+  ..$ : chr &quot;https://twitter.com/Blawksy/status/1027870729432256513/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/feeloox1/status/1027870693742899202/photo/1&quot;
+  ..$ : chr &quot;https://twitter.com/BitcoinCoreNews/status/1027870690735603712/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;https://twitter.com/CryptoKeeper888/status/1027870642664878080/photo/1&quot; &quot;https://twitter.com/CryptoKeeper888/status/1027870642664878080/photo/1&quot; &quot;https://twitter.com/CryptoKeeper888/status/1027870642664878080/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/BTCTN/status/1023765966642139136/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/Xentagz/status/1027655343936098310/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/1xbit_es/status/1027870447638011904/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/hudson_chatbots/status/1027870431045410816/photo/1&quot;
+  ..$ : chr &quot;https://twitter.com/TheCryptoLark/status/1026001914570334214/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/Xentagz/status/1027655343936098310/photo/1&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;https://twitter.com/CNBC/status/1027580996739362817/photo/1&quot;
+  ..$ : chr &quot;https://twitter.com/TheCryptoLark/status/1026001914570334214/photo/1&quot;
+ $ ext_media_type         : chr  NA NA NA NA ...
+ $ mentions_user_id       :List of 40
+  ..$ : chr NA
+  ..$ : chr &quot;953409414714810369&quot;
+  ..$ : chr  &quot;982149194893770753&quot; &quot;1002513672013565952&quot; &quot;903828825875914753&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;1009019086926499840&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;818174358862622720&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;188230539&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;3367334171&quot;
+  ..$ : chr  &quot;2207129125&quot; &quot;2207129125&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;988609208252678144&quot;
+  ..$ : chr &quot;988609208252678144&quot;
+  ..$ : chr &quot;3021235211&quot;
+  ..$ : chr  &quot;1656328279&quot; &quot;896141&quot; &quot;3009637010&quot; &quot;3108351&quot;
+  ..$ : chr &quot;14717442&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;996881585348767744&quot;
+  ..$ : chr  &quot;65563900&quot; &quot;955791638034567168&quot;
+  ..$ : chr &quot;988609208252678144&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;992305518751313920&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;175007074&quot; &quot;846014785246367745&quot; &quot;1001801984708694016&quot; &quot;618983612&quot; ...
+  ..$ : chr &quot;30325257&quot;
+  ..$ : chr  &quot;885825493160906755&quot; &quot;354619566&quot;
+  ..$ : chr &quot;14717442&quot;
+  ..$ : chr &quot;1009019086926499840&quot;
+  ..$ : chr &quot;756489780171505664&quot;
+  ..$ : chr &quot;996002096745984000&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;815278034&quot;
+  ..$ : chr &quot;30325257&quot;
+ $ mentions_screen_name   :List of 40
+  ..$ : chr NA
+  ..$ : chr &quot;ETERBASE&quot;
+  ..$ : chr  &quot;aencoin&quot; &quot;DarrenLui1&quot; &quot;CryptoCoinTrdr&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;CryptoSouk&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;RandolphMlny&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr &quot;arunfreelance&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;BTCTN&quot;
+  ..$ : chr  &quot;Cointelegraph&quot; &quot;Cointelegraph&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;SpokkzOfficial&quot;
+  ..$ : chr &quot;SpokkzOfficial&quot;
+  ..$ : chr &quot;VWGroup&quot;
+  ..$ : chr  &quot;LTCFoundation&quot; &quot;billbarhydt&quot; &quot;AbraGlobal&quot; &quot;WSJ&quot;
+  ..$ : chr &quot;Xentagz&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;CryptoEarnCoin&quot;
+  ..$ : chr  &quot;HerbertRSim&quot; &quot;Cryptologyexch&quot;
+  ..$ : chr &quot;SpokkzOfficial&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;EonToken&quot;
+  ..$ : chr NA
+  ..$ : chr NA
+  ..$ : chr  &quot;Auual&quot; &quot;Fisher85M&quot; &quot;athis_news&quot; &quot;AshleyReyesCom&quot; ...
+  ..$ : chr &quot;TheCryptoLark&quot;
+  ..$ : chr  &quot;digycode&quot; &quot;YouPassFR&quot;
+  ..$ : chr &quot;Xentagz&quot;
+  ..$ : chr &quot;CryptoSouk&quot;
+  ..$ : chr &quot;cryptcurnews&quot;
+  ..$ : chr &quot;Local_Token&quot;
+  ..$ : chr NA
+  ..$ : chr &quot;MarketingGurus2&quot;
+  ..$ : chr &quot;TheCryptoLark&quot;
+ $ lang                   : chr  &quot;en&quot; &quot;en&quot; &quot;en&quot; &quot;en&quot; ...
+ $ quoted_status_id       : chr  NA NA NA NA ...
+ $ quoted_text            : chr  NA NA NA NA ...
+ $ quoted_created_at      : POSIXct, format: NA NA ...
+ $ quoted_source          : chr  NA NA NA NA ...
+ $ quoted_favorite_count  : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ quoted_retweet_count   : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ quoted_user_id         : chr  NA NA NA NA ...
+ $ quoted_screen_name     : chr  NA NA NA NA ...
+ $ quoted_name            : chr  NA NA NA NA ...
+ $ quoted_followers_count : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ quoted_friends_count   : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ quoted_statuses_count  : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ quoted_location        : chr  NA NA NA NA ...
+ $ quoted_description     : chr  NA NA NA NA ...
+ $ quoted_verified        : logi  NA NA NA NA NA NA ...
+ $ retweet_status_id      : chr  NA &quot;1027000224043212800&quot; &quot;1026310713969541121&quot; NA ...
+ $ retweet_text           : chr  NA &quot;Goldman Sachs May Store Bitcoin for Cryptocurrency Funds, Institutional Investors. The future of #crypto is loo&quot;| __truncated__ &quot;Aenco Co-founder @DarrenLui1 was live-stream interviewed on Facebook by Joe Blackburn, the founder and CEO of @&quot;| __truncated__ NA ...
+ $ retweet_created_at     : POSIXct, format: NA &quot;2018-08-08 01:15:08&quot; ...
+ $ retweet_source         : chr  NA &quot;Social Media Publisher App &quot; &quot;Twitter Web Client&quot; NA ...
+ $ retweet_favorite_count : int  NA 856 1285 NA NA NA NA 98 NA 7 ...
+ $ retweet_retweet_count  : int  NA 1093 1555 NA NA NA NA 78 NA 5 ...
+ $ retweet_user_id        : chr  NA &quot;953409414714810369&quot; &quot;982149194893770753&quot; NA ...
+ $ retweet_screen_name    : chr  NA &quot;ETERBASE&quot; &quot;aencoin&quot; NA ...
+ $ retweet_name           : chr  NA &quot;ETERBASE&quot; &quot;Aenco&quot; NA ...
+ $ retweet_followers_count: int  NA 4430 4815 NA NA NA NA 11525 NA 653 ...
+ $ retweet_friends_count  : int  NA 247 9 NA NA NA NA 0 NA 417 ...
+ $ retweet_statuses_count : int  NA 164 56 NA NA NA NA 143 NA 997 ...
+ $ retweet_location       : chr  NA &quot;Liechtenstein&quot; &quot;Hong Kong&quot; NA ...
+ $ retweet_description    : chr  NA &quot;ETERBASE is the first regulation-compliant European cryptocurrency exchange, offering fast, secure trading on a&quot;| __truncated__ &quot;AENCO IS THE WORLD’S FIRST HEALTHTECH FINANCIAL SOLUTIONS PLATFORM SUPPORTED BY THE AENCO BLOCKCHAIN&quot; NA ...
+ $ retweet_verified       : logi  NA FALSE FALSE NA NA NA ...
+ $ place_url              : chr  NA NA NA NA ...
+ $ place_name             : chr  NA NA NA NA ...
+ $ place_full_name        : chr  NA NA NA NA ...
+ $ place_type             : chr  NA NA NA NA ...
+ $ country                : chr  NA NA NA NA ...
+ $ country_code           : chr  NA NA NA NA ...
+ $ geo_coords             :List of 40
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+ $ coords_coords          :List of 40
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+  ..$ : num  NA NA
+ $ bbox_coords            :List of 40
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+  ..$ : num  NA NA NA NA NA NA NA NA
+ $ status_url             : chr  &quot;https://twitter.com/Blawksy/status/1027870729432256513&quot; &quot;https://twitter.com/cryptopank/status/1027870725330423808&quot; &quot;https://twitter.com/serhio_coin88/status/1027870717700972544&quot; &quot;https://twitter.com/1bitcoin2/status/1027870711237365761&quot; ...
+ $ name                   : chr  &quot;Blawks Crypto&quot; &quot;CryptoPank&quot; &quot;Serhio Coin&quot; &quot;$BTC &amp; Crypto News&quot; ...
+ $ location               : chr  &quot;&quot; &quot;&quot; &quot;&lt;U+0423&gt;&lt;U+043A&gt;&lt;U+0440&gt;&lt;U+0430&gt;&lt;U+0438&gt;&lt;U+043D&gt;&lt;U+0430&gt;&quot; &quot;&quot; ...
+ $ description            : chr  &quot;#Crypto News  | Don&#39;t miss a thing .&quot; &quot;#Bitcoin #cryptocurrency #Bounty #crowdsale #Blockchain #btc #altcoin #FollowBack #FollowMe&quot; &quot;#&lt;U+0447&gt;&lt;U+0438&gt;&lt;U+0442&gt;&lt;U+0430&gt;&lt;U+044E&gt; #&lt;U+043F&gt;&lt;U+043E&gt;&lt;U+0434&gt;&lt;U+043F&gt;&lt;U+0438&gt;&lt;U+0441&gt;&lt;U+043A&gt;&lt;U+0430&gt;&lt;U+0&quot;| __truncated__ &quot;$btc $ltc $eth $etc $xmr $xrp  Bitcoin,\n Ethereum\n Ripple,\n Litecoin\n Ethereum Classic,\n Dash\n NEM,\n IOT&quot;| __truncated__ ...
+ $ url                    : chr  &quot;https://t.co/d1Ofyw0iE0&quot; NA NA NA ...
+ $ protected              : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ followers_count        : int  1420 5751 3647 95 417 66 3598 42 21927 653 ...
+ $ friends_count          : int  1608 5933 3921 20 155 7 179 317 233 417 ...
+ $ listed_count           : int  26 22 2 6 85 5 99 0 471 17 ...
+ $ statuses_count         : int  38227 3217 1854 9290 13272 1834 44901 522 1493 997 ...
+ $ favourites_count       : int  2910 3237 895 5 245 3 314 251 1281 63 ...
+ $ account_created_at     : POSIXct, format: &quot;2017-10-27 21:36:00&quot; &quot;2011-11-13 14:50:04&quot; ...
+ $ verified               : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ profile_url            : chr  &quot;https://t.co/d1Ofyw0iE0&quot; NA NA NA ...
+ $ profile_expanded_url   : chr  &quot;http://blawks.com&quot; NA NA NA ...
+ $ account_lang           : chr  &quot;en&quot; &quot;ru&quot; &quot;ru&quot; &quot;fr&quot; ...
+ $ profile_banner_url     : chr  &quot;https://pbs.twimg.com/profile_banners/924026919993139200/1512174033&quot; &quot;https://pbs.twimg.com/profile_banners/411525843/1515377374&quot; &quot;https://pbs.twimg.com/profile_banners/971504962739036161/1523030150&quot; &quot;https://pbs.twimg.com/profile_banners/885224342489096194/1499889447&quot; ...
+ $ profile_background_url : chr  &quot;http://abs.twimg.com/images/themes/theme1/bg.png&quot; &quot;http://abs.twimg.com/images/themes/theme9/bg.gif&quot; &quot;http://abs.twimg.com/images/themes/theme1/bg.png&quot; NA ...
+ $ profile_image_url      : chr  &quot;http://pbs.twimg.com/profile_images/934896920019066881/FI725RP__normal.jpg&quot; &quot;http://pbs.twimg.com/profile_images/969949189248516096/FpW7U4bf_normal.jpg&quot; &quot;http://pbs.twimg.com/profile_images/1004836974627295232/4uiIB9Pw_normal.jpg&quot; &quot;http://pbs.twimg.com/profile_images/885226357642473472/iqcOSoFR_normal.jpg&quot; ...
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>5.2.3 datamining bitcoin and twitter</h3>
+<div class="slideContent" >
+<pre><code class="r">summary(bitcoin_tweets)
+</code></pre>
+
+<pre><code>   user_id           status_id           created_at                 
+ Length:40          Length:40          Min.   :2018-08-10 10:52:42  
+ Class :character   Class :character   1st Qu.:2018-08-10 10:53:01  
+ Mode  :character   Mode  :character   Median :2018-08-10 10:53:28  
+                                       Mean   :2018-08-10 10:53:27  
+                                       3rd Qu.:2018-08-10 10:53:52  
+                                       Max.   :2018-08-10 10:54:13  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ screen_name            text              source         
+ Length:40          Length:40          Length:40         
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ display_text_width reply_to_status_id reply_to_user_id  
+ Min.   : 26        Length:40          Length:40         
+ 1st Qu.:104        Class :character   Class :character  
+ Median :139        Mode  :character   Mode  :character  
+ Mean   :127                                             
+ 3rd Qu.:140                                             
+ Max.   :280                                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ reply_to_screen_name  is_quote       is_retweet      favorite_count 
+ Length:40            Mode :logical   Mode :logical   Min.   :0.000  
+ Class :character     FALSE:37        FALSE:17        1st Qu.:0.000  
+ Mode  :character     TRUE :3         TRUE :23        Median :0.000  
+                                                      Mean   :0.025  
+                                                      3rd Qu.:0.000  
+                                                      Max.   :1.000  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ retweet_count    hashtags.Length  hashtags.Class  hashtags.Mode
+ Min.   :   0.0    1         -none-     character               
+ 1st Qu.:   0.0    1         -none-     character               
+ Median :   5.0    1         -none-     character               
+ Mean   : 130.3    1         -none-     character               
+ 3rd Qu.:  80.0    1         -none-     character               
+ Max.   :1555.0    1         -none-     character               
+                   2         -none-     character               
+                   1         -none-     character               
+                   5         -none-     character               
+                   6         -none-     character               
+                   8         -none-     character               
+                   1         -none-     character               
+                  15         -none-     character               
+                   7         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   3         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   2         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   9         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   6         -none-     character               
+                   2         -none-     character               
+                   4         -none-     character               
+                   3         -none-     character               
+                  13         -none-     character               
+                   2         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   1         -none-     character               
+                   2         -none-     character               
+                  14         -none-     character               
+                   1         -none-     character               
+                   2         -none-     character               
+ symbols.Length  symbols.Class  symbols.Mode
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+ 22         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+  1         -none-     character            
+ urls_url.Length  urls_url.Class  urls_url.Mode
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ 1          -none-     character               
+ urls_t.co.Length  urls_t.co.Class  urls_t.co.Mode
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ urls_expanded_url.Length  urls_expanded_url.Class  urls_expanded_url.Mode
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ 1          -none-     character                                          
+ media_url.Length  media_url.Class  media_url.Mode
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ 1          -none-     character                  
+ media_t.co.Length  media_t.co.Class  media_t.co.Mode
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ media_expanded_url.Length  media_expanded_url.Class  media_expanded_url.Mode
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ 1          -none-     character                                             
+ media_type.Length  media_type.Class  media_type.Mode
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ 1          -none-     character                     
+ ext_media_url.Length  ext_media_url.Class  ext_media_url.Mode
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 3          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ 1          -none-     character                              
+ ext_media_t.co.Length  ext_media_t.co.Class  ext_media_t.co.Mode
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 3          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ 1          -none-     character                                 
+ ext_media_expanded_url.Length  ext_media_expanded_url.Class  ext_media_expanded_url.Mode
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 3          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ 1          -none-     character                                                         
+ ext_media_type    
+ Length:40         
+ Class :character  
+ Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ mentions_user_id.Length  mentions_user_id.Class  mentions_user_id.Mode
+  1         -none-     character                                       
+  1         -none-     character                                       
+  3         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  2         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  4         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  2         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+ 10         -none-     character                                       
+  1         -none-     character                                       
+  2         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+  1         -none-     character                                       
+ mentions_screen_name.Length  mentions_screen_name.Class  mentions_screen_name.Mode
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  3         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  2         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  4         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  2         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+ 10         -none-     character                                                   
+  1         -none-     character                                                   
+  2         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+  1         -none-     character                                                   
+     lang           quoted_status_id   quoted_text       
+ Length:40          Length:40          Length:40         
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ quoted_created_at             quoted_source      quoted_favorite_count
+ Min.   :2018-06-20 11:04:51   Length:40          Min.   : 239.0       
+ 1st Qu.:2018-06-20 16:03:20   Class :character   1st Qu.: 281.5       
+ Median :2018-06-20 21:01:49   Mode  :character   Median : 324.0       
+ Mean   :2018-07-05 03:50:35                      Mean   : 546.3       
+ 3rd Qu.:2018-07-12 12:13:27                      3rd Qu.: 700.0       
+ Max.   :2018-08-03 03:25:05                      Max.   :1076.0       
+ NA&#39;s   :37                                       NA&#39;s   :37           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ quoted_retweet_count quoted_user_id     quoted_screen_name
+ Min.   :181.0        Length:40          Length:40         
+ 1st Qu.:215.5        Class :character   Class :character  
+ Median :250.0        Mode  :character   Mode  :character  
+ Mean   :411.0                                             
+ 3rd Qu.:526.0                                             
+ Max.   :802.0                                             
+ NA&#39;s   :37                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ quoted_name        quoted_followers_count quoted_friends_count
+ Length:40          Min.   :4793           Min.   :  11        
+ Class :character   1st Qu.:6768           1st Qu.:  27        
+ Mode  :character   Median :8744           Median :  43        
+                    Mean   :7612           Mean   :2835        
+                    3rd Qu.:9021           3rd Qu.:4246        
+                    Max.   :9298           Max.   :8450        
+                    NA&#39;s   :37             NA&#39;s   :37          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ quoted_statuses_count quoted_location    quoted_description
+ Min.   :  8.0         Length:40          Length:40         
+ 1st Qu.: 48.5         Class :character   Class :character  
+ Median : 89.0         Mode  :character   Mode  :character  
+ Mean   :216.7                                              
+ 3rd Qu.:321.0                                              
+ Max.   :553.0                                              
+ NA&#39;s   :37                                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ quoted_verified retweet_status_id  retweet_text      
+ Mode :logical   Length:40          Length:40         
+ FALSE:3         Class :character   Class :character  
+ NA&#39;s :37        Mode  :character   Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ retweet_created_at            retweet_source     retweet_favorite_count
+ Min.   :2017-12-11 15:06:48   Length:40          Min.   :   0.0        
+ 1st Qu.:2018-08-05 07:08:13   Class :character   1st Qu.:  56.0        
+ Median :2018-08-08 01:15:08   Mode  :character   Median : 131.0        
+ Mean   :2018-07-27 03:59:19                      Mean   : 255.7        
+ 3rd Qu.:2018-08-09 21:41:43                      3rd Qu.: 342.5        
+ Max.   :2018-08-10 10:52:30                      Max.   :1285.0        
+ NA&#39;s   :17                                       NA&#39;s   :17            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ retweet_retweet_count retweet_user_id    retweet_screen_name
+ Min.   :   1.0        Length:40          Length:40          
+ 1st Qu.:  47.5        Class :character   Class :character   
+ Median :  78.0        Mode  :character   Mode  :character   
+ Mean   : 226.6                                              
+ 3rd Qu.: 230.5                                              
+ Max.   :1555.0                                              
+ NA&#39;s   :17                                                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ retweet_name       retweet_followers_count retweet_friends_count
+ Length:40          Min.   :   281          Min.   :     0.0     
+ Class :character   1st Qu.:  5351          1st Qu.:    19.5     
+ Mode  :character   Median : 11525          Median :   293.0     
+                    Mean   : 57347          Mean   : 10535.4     
+                    3rd Qu.: 33078          3rd Qu.:   902.0     
+                    Max.   :415379          Max.   :202074.0     
+                    NA&#39;s   :17              NA&#39;s   :17           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ retweet_statuses_count retweet_location   retweet_description
+ Min.   :    28         Length:40          Length:40          
+ 1st Qu.:   126         Class :character   Class :character   
+ Median :  1284         Mode  :character   Mode  :character   
+ Mean   : 17222                                               
+ 3rd Qu.: 10670                                               
+ Max.   :177028                                               
+ NA&#39;s   :17                                                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ retweet_verified  place_url          place_name        place_full_name   
+ Mode :logical    Length:40          Length:40          Length:40         
+ FALSE:20         Class :character   Class :character   Class :character  
+ TRUE :3          Mode  :character   Mode  :character   Mode  :character  
+ NA&#39;s :17                                                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  place_type          country          country_code      
+ Length:40          Length:40          Length:40         
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ geo_coords.Length  geo_coords.Class  geo_coords.Mode
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ 2        -none-   numeric                           
+ coords_coords.Length  coords_coords.Class  coords_coords.Mode
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ 2        -none-   numeric                                    
+ bbox_coords.Length  bbox_coords.Class  bbox_coords.Mode
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+ 8        -none-   numeric                              
+  status_url            name             location        
+ Length:40          Length:40          Length:40         
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ description            url            protected       followers_count  
+ Length:40          Length:40          Mode :logical   Min.   :    0.0  
+ Class :character   Class :character   FALSE:40        1st Qu.:  137.5  
+ Mode  :character   Mode  :character                   Median :  889.5  
+                                                       Mean   : 4040.1  
+                                                       3rd Qu.: 5797.2  
+                                                       Max.   :31051.0  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ friends_count      listed_count      statuses_count    
+ Min.   :    7.0   Min.   :    0.00   Min.   :    30.0  
+ 1st Qu.:  160.2   1st Qu.:    0.75   1st Qu.:   701.5  
+ Median :  344.0   Median :   11.00   Median :  3041.0  
+ Mean   : 2180.8   Mean   :  507.73   Mean   : 34327.3  
+ 3rd Qu.: 3346.5   3rd Qu.:   28.50   3rd Qu.: 10947.0  
+ Max.   :11618.0   Max.   :18081.00   Max.   :947035.0  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ favourites_count   account_created_at             verified      
+ Min.   :     0.0   Min.   :2008-05-09 20:09:57   Mode :logical  
+ 1st Qu.:    60.5   1st Qu.:2014-05-24 05:46:03   FALSE:40       
+ Median :   319.0   Median :2017-08-02 02:52:30                  
+ Mean   : 21333.0   Mean   :2016-02-14 03:54:44                  
+ 3rd Qu.:  3339.5   3rd Qu.:2018-02-12 10:59:34                  
+ Max.   :679261.0   Max.   :2018-08-09 19:24:40                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ profile_url        profile_expanded_url account_lang      
+ Length:40          Length:40            Length:40         
+ Class :character   Class :character     Class :character  
+ Mode  :character   Mode  :character     Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ profile_banner_url profile_background_url profile_image_url 
+ Length:40          Length:40              Length:40         
+ Class :character   Class :character       Class :character  
+ Mode  :character   Mode  :character       Mode  :character  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>5.2.3 datamining bitcoin and twitter</h3>
+<div class="slideContent" >
+<pre><code class="r">summary(bitcoin_tweets$created_at)
+</code></pre>
+
+<pre><code>                 Min.               1st Qu.                Median 
+&quot;2018-08-10 10:52:42&quot; &quot;2018-08-10 10:53:01&quot; &quot;2018-08-10 10:53:28&quot; 
+                 Mean               3rd Qu.                  Max. 
+&quot;2018-08-10 10:53:27&quot; &quot;2018-08-10 10:53:52&quot; &quot;2018-08-10 10:54:13&quot; 
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>5.2.4 datamining bitcoin and twitter</h3>
 <div class="slideContent" >
 <pre><code class="r">#https://www.rdocumentation.org/packages/MSBVAR/versions/0.9-2/topics/granger.test
 #https://davegiles.blogspot.com/2012/11/granger-causality-testing-in-r.html

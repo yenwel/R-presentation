@@ -185,11 +185,13 @@ In the following segment I try to provide a high level run through of basic conc
 
 3.2 DIKW pyramid
 ========================================================
-![alt text](Introduction-to-R-figure/DIKWpyramid.gif "DIKWpy")
+
+<img src="Introduction-to-R-figure/DIKWpyramid.gif" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" width="4000px" />
 
 3.3 DIKW cycle
 ========================================================
-![alt text](Introduction-to-R-figure/DIKWcycle.jpg "DIKWcyc")
+
+<img src="Introduction-to-R-figure/DIKWcycle.jpg" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="4000px" />
 
 3.4 Statistics and Machine learning
 ========================================================
@@ -197,15 +199,30 @@ In the following segment I try to provide a high level run through of basic conc
 
 3.5 Error terms
 ========================================================
-Reduce Errors Of Our Models (fix bugs? unit testing?): Stochastical element.
+In programming we try to reduce the errors in our models (programs) by fixing bugs and doing unit testing.
 
-![alt text](Introduction-to-R-figure/residual.png "residual")![alt text](Introduction-to-R-figure/errorterm2.jpg "errorterm")
+Reduce Errors Of Our statistical models :
+Stochastical element. Error is quantifiable with data.
+
+3.5 Error terms
+========================================================
+
+<img src="Introduction-to-R-figure/residual.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="4000px" />
+Model is estimation of errorterms of data around model
+
+
+3.5 Error terms
+========================================================
+
+<img src="Introduction-to-R-figure/errorterm2.jpg" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="4000px" />
+Error has a probability distribution around: assumed to be normal distributed
 
 3.6 Error types : hypothesis testing
 ========================================================
+<img src="Introduction-to-R-figure/errortypes.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" width="4000px" />
 
-![alt text](Introduction-to-R-figure/errortypes.png "errortypes")
-
+3.6 Error types : hypothesis testing
+========================================================
 * type I : incorrectly detect effect when there is none (bias, noise...) : overfitting
 * type II : incorrectly detect no effect (0 hypothesis) when there is an effect : underfitting
 
@@ -298,23 +315,18 @@ https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-ca
 In knitR it's also possible to run code from other languages:
   * https://yihui.name/knitr/demo/engines/
   * http://datadrivensecurity.info/blog/posts/2015/Jun/running-other-languages-in-r-markdown-files/
+
 So let's add an engine for .net
 
 ```r
 eng_dotnet <- function(options) {
   # create a temporary file
-
   f <- basename(tempfile("dotnet", '.', paste('.', "dotnet", sep = '')))
   on.exit(unlink(f)) # cleanup temp file on function exit
   writeLines(options$code, f)
-  
   out <- ''
   # if eval != FALSE compile/run the code, preserving output
   if (options$eval) {
-    # https://github.com/filipw/dotnet-script : 
-    # choco install dotnet.script 
-    # or 
-    # dotnet tool install -g dotnet-script (preferred)
     out <- system(sprintf('dotnet script %s', paste(f, options$engine.opts)), intern=TRUE)
   }
   # spit back stuff to the user
@@ -329,6 +341,7 @@ knitr::knit_engines$set(dotnet=eng_dotnet)
 if (!requireNamespace("devtools", quietly = TRUE)) { install.packages("devtools") }
 devtools::install_github("yenwel/Rpresdotnetengine", force=T)
 library(Rpresdotnetengine)
+knitr::knit_engines$set(dotnet=eng_dotnet)
 ```
 
 4.1 Let's try out our new engine
@@ -581,17 +594,13 @@ trades <- market.api.process('kraken',c('BTC','EUR'),'trades')
 Rbitcoin.plot(trades, col='blue')
 ```
 
-![plot of chunk unnamed-chunk-8](Introduction-to-R-figure/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-13](Introduction-to-R-figure/unnamed-chunk-13-1.png)
 
 5.2.2 data mining bitcoin and twitter
 ========================================================
 
+
 ```r
-#https://www.earthdatascience.org/courses/earth-analytics/get-data-using-apis/use-twitter-api-r/
-## install devtools package if it's not already
-#if (!requireNamespace("devtools", quietly = TRUE)) { install.packages("devtools") }
-## install dev version of rtweet from github
-#devtools::install_github("mkearney/rtweet")
 ## load rtweet package
 library(rtweet)
 # these environment variables are set via an app you can make at https://developer.twitter.com/en/apps

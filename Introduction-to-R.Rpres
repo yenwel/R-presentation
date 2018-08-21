@@ -250,12 +250,12 @@ Conclusion: the more (quality) data, the better for our models
 
 ![alt text](Introduction-to-R-figure/dataoil.png "dataoil")
 
-New headaches: Horizontal scalability, distributed systems, CAP theoreum ...
+New headaches: Horizontal scalability, distributed systems, CAP and CALM theoreum ...
 
 
 3.11 Deep learning
 ========================================================
-deep neural networks, more data and faster hardware (GPU)
+deep neural networks, long history, more data and faster hardware (GPU)
 
 ![alt text](Introduction-to-R-figure/deeplearning.png "deeplearning")
 
@@ -278,6 +278,8 @@ http://colah.github.io/posts/2015-09-NN-Types-FP/
 * Basic statistics : https://www.itl.nist.gov/div898/handbook/
 * Machine learning : https://dzone.com/articles/35-free-online-books-machine
 * https://www.kdnuggets.com/
+* https://www.kaggle.com/
+* https://www.datasciencecentral.com/
 
 3.14 Level I in Causal hierarchy
 ========================================================
@@ -466,7 +468,7 @@ token <- create_token(
   consumer_secret = secret, 
   access_token = access_token, 
   access_secret = access_secret)
-bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 50)
+bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 5000)
 ```
 
 5.2.3 datamining bitcoin and twitter

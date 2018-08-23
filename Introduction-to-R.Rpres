@@ -241,6 +241,9 @@ with more data, we need less assumptions of underlying error term
 ![alt text](Introduction-to-R-figure/statisticalpower.jpg "statisticalpower")
 
 Power is chance that our model will correctly detect an effect. Power will decrease with more features in our model. Power will increase with larger sample size for our model.
+More power = less underfitting (less type II error).
+
+Median vs arithmetic average.
 
 
 3.10 Big data - Data is the new oil
@@ -255,7 +258,7 @@ New headaches: Horizontal scalability, distributed systems, CAP and CALM theoreu
 
 3.11 Deep learning
 ========================================================
-deep neural networks, long history, more data and faster hardware (GPU)
+deep neural networks, long history, more data and faster hardware (GPU and even TPU)
 
 ![alt text](Introduction-to-R-figure/deeplearning.png "deeplearning")
 
@@ -271,6 +274,8 @@ Renewed interest so some interesting developments
 * Representation learning (less feature engineering)
 * Theoretical framework (category theory): a new way of programming but with linear algebra
 http://colah.github.io/posts/2015-09-NN-Types-FP/
+* Auto-ML : deep learning for non-experts
+* cross platform: tensorflow on RPI and in browser
 
 3.13 Deep dive theoretical
 ========================================================
@@ -294,6 +299,8 @@ https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-ca
 ========================================================
 
 ![alt text](Introduction-to-R-figure/simpsons.png "simpson paradox")
+
+body weight related to disease (men vs women, children vs adults)
 
 
 4. R for the .NET programmer
@@ -413,7 +420,7 @@ start here:
 
 then google (CRAN because R is to confusing for google)
 
-```{r}
+```{r, eval=FALSE}
 ??something
 ```
 
@@ -468,7 +475,7 @@ token <- create_token(
   consumer_secret = secret, 
   access_token = access_token, 
   access_secret = access_secret)
-bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 5000)
+bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 50 , retryonratelimit=T)
 ```
 
 5.2.3 datamining bitcoin and twitter

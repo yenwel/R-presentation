@@ -272,12 +272,21 @@ Renewed interest so some interesting developments
 * Auto-encoder (encoder-decoder chained learned with internal representation)
 * SEQ2SEQ (arbitrary size representation for e.g. NLP)
 * Representation learning (less feature engineering)
-* Theoretical framework (category theory): a new way of programming but with linear algebra
-http://colah.github.io/posts/2015-09-NN-Types-FP/
 * Auto-ML : deep learning for non-experts
 * cross platform: tensorflow on RPI and in browser
+* Theoretical framework (category theory): a new way of programming but with linear algebra
+http://colah.github.io/posts/2015-09-NN-Types-FP/
 
-3.13 Deep dive theoretical
+3.13 Deep learning
+========================================================
+
+> Deep learning est mort, vive differentiable programming ~ Yann LeCun - Chief AI facebook
+
+https://medium.com/@karpathy/software-2-0-a64152b37c35
+https://www.facebook.com/yann.lecun/posts/10155003011462143
+https://techburst.io/deep-learning-est-mort-vive-differentiable-programming-5060d3c55074
+
+3.14 Deep dive theoretical
 ========================================================
 
 * Basic statistics : https://www.itl.nist.gov/div898/handbook/
@@ -286,7 +295,7 @@ http://colah.github.io/posts/2015-09-NN-Types-FP/
 * https://www.kaggle.com/
 * https://www.datasciencecentral.com/
 
-3.14 Level I in Causal hierarchy
+3.15 Level I in Causal hierarchy
 ========================================================
 
 ![alt text](Introduction-to-R-figure/levelcausalhierarchy.pdf.png "causalhierarchy")
@@ -295,7 +304,7 @@ https://arxiv.org/pdf/1801.04016.pdf
 
 https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515/
 
-3.15 Simpson paradox
+3.16 Simpson paradox
 ========================================================
 
 ![alt text](Introduction-to-R-figure/simpsons.png "simpson paradox")

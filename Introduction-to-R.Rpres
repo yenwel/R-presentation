@@ -565,3 +565,9 @@ hist(tradesinrange$date, "secs")
 hist(tweetsinrange$created_at, "secs")
 ```
 
+```{r, echo=FALSE}
+library("rmarkdown")
+render("Introduction-to-R.Rpres",output_format = "pdf_document",output_file = 'Introduction-to-R.Rpres.pdf')
+```
+
+

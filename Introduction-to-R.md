@@ -736,7 +736,7 @@ Classes 'tbl_df', 'tbl' and 'data.frame':	11996 obs. of  88 variables:
  $ status_id              : chr  "1035052207249313792" "1035052205764751360" "1035050117961789440" "1035052205634736128" ...
  $ created_at             : POSIXct, format: "2018-08-30 06:30:51" "2018-08-30 06:30:50" ...
  $ screen_name            : chr  "Evileye420" "KucoinT" "KucoinT" "DASHTicker" ...
- $ text                   : chr  "Visit our website and find more information about the #MEMEZ project. \n\nDon't forget to share the news about "| __truncated__ "Asch (XAS) Deposit ve Withdraw Artik Etkin\n\n  Asch (XAS) cÃ¼zdani iÃ§in yÃ¼kseltme tamamlandi ve artik normal Ã§a"| __truncated__ "KuCoin Haftalik Raporu #16 â€“ 30/08/2018\n\n  En Ã¶nemli gÃ¼ncellemelerimizi Mediumâ€™dan takip edin!\n\n  Detayli b"| __truncated__ "#DASH Price is 0.02605342 (-0.00001105) #BTC / 182.635149027 (+0.28252) #USD. Market rank is 13. #dash #bitcoin #blockchain" ...
+ $ text                   : chr  "Visit our website and find more information about the #MEMEZ project. \n\nDon't forget to share the news about "| __truncated__ "Asch (XAS) Deposit ve Withdraw Artik Etkin\n\n  Asch (XAS) cüzdani için yükseltme tamamlandi ve artik normal ça"| __truncated__ "KuCoin Haftalik Raporu #16 – 30/08/2018\n\n  En önemli güncellemelerimizi Medium’dan takip edin!\n\n  Detayli b"| __truncated__ "#DASH Price is 0.02605342 (-0.00001105) #BTC / 182.635149027 (+0.28252) #USD. Market rank is 13. #dash #bitcoin #blockchain" ...
  $ source                 : chr  "Twitter Web Client" "Twitter Web Client" "Twitter Web Client" "Dashticker" ...
  $ display_text_width     : num  140 275 229 123 123 122 123 123 122 122 ...
  $ reply_to_status_id     : chr  NA NA NA NA ...
@@ -950,8 +950,8 @@ Classes 'tbl_df', 'tbl' and 'data.frame':	11996 obs. of  88 variables:
   .. [list output truncated]
  $ urls_url               :List of 11996
   ..$ : chr NA
-  ..$ : chr "news.kucoin.com/en/asch-xas-deâ€¦"
-  ..$ : chr "medium.com/kucoinexchangeâ€¦"
+  ..$ : chr "news.kucoin.com/en/asch-xas-de…"
+  ..$ : chr "medium.com/kucoinexchange…"
   ..$ : chr NA
   ..$ : chr NA
   ..$ : chr NA
@@ -2503,8 +2503,8 @@ Classes 'tbl_df', 'tbl' and 'data.frame':	11996 obs. of  88 variables:
   .. [list output truncated]
  $ status_url             : chr  "https://twitter.com/Evileye420/status/1035052207249313792" "https://twitter.com/KucoinT/status/1035052205764751360" "https://twitter.com/KucoinT/status/1035050117961789440" "https://twitter.com/DASHTicker/status/1035052205634736128" ...
  $ name                   : chr  "Sp Rahman" "KuCoin Exchange Turkey" "KuCoin Exchange Turkey" "Dash Price Ticker" ...
- $ location               : chr  "Indonesia" "Istanbul, TÃ¼rkiye" "Istanbul, TÃ¼rkiye" "World Wide Web" ...
- $ description            : chr  "Your Life, isn't your<U+0001F60D><U+0001F60D><U+0001F975><U+0001F976><U+0001F63F>\n\n#Follow #Followback #Bitco"| __truncated__ "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi TÃ¼rkiye resmi hesabi" "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi TÃ¼rkiye resmi hesabi" "Dash Price Details  (every 30 minute)" ...
+ $ location               : chr  "Indonesia" "Istanbul, Türkiye" "Istanbul, Türkiye" "World Wide Web" ...
+ $ description            : chr  "Your Life, isn't your<U+0001F60D><U+0001F60D><U+0001F975><U+0001F976><U+0001F63F>\n\n#Follow #Followback #Bitco"| __truncated__ "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi Türkiye resmi hesabi" "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi Türkiye resmi hesabi" "Dash Price Details  (every 30 minute)" ...
  $ url                    : chr  "https://t.co/OUD7taoIfC" "https://t.co/TJQgwh37m5" "https://t.co/TJQgwh37m5" "https://t.co/4a2BZvcRvW" ...
  $ protected              : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
  $ followers_count        : int  3054 76 76 115 115 115 115 115 115 115 ...
@@ -48089,3 +48089,34 @@ hist(tweetsinrange$created_at, "secs")
 
 <img src="Introduction-to-R-figure/unnamed-chunk-30-1.png" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="4000px" />
 
+
+
+
+```
+processing file: Introduction-to-R.Rpres
+Downloading GitHub repo yenwel/Rpresdotnetengine@master
+from URL https://api.github.com/repos/yenwel/Rpresdotnetengine/zipball/master
+Installing Rpresdotnetengine
+"C:/PROGRA~1/R/R-35~1.1/bin/x64/R" --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL  \
+  "C:/Users/jnve11/AppData/Local/Temp/Rtmpo7FTDE/devtools967c55533593/yenwel-Rpresdotnetengine-654be86"  \
+  --library="C:/Users/jnve11/Documents/R/win-library/3.5"  \
+  --install-tests 
+
+* installing *source* package 'Rpresdotnetengine' ...
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+    finding HTML links ... done
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (Rpresdotnetengine)
+In R CMD INSTALL
+pandoc.exe: pdflatex not found. pdflatex is needed for pdf output.
+Quitting from lines 569-571 (Introduction-to-R.Rpres) 
+Error: pandoc document conversion failed with error 41
+Execution halted
+```

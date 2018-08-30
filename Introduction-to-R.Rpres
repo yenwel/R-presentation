@@ -628,6 +628,25 @@ grangertest(bidprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
 grangertest(askprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
 ```
 
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+splitnumber <- nrow(tradesandtweetsTSImputed)*0.9
+splitindextrain <- index(tradesandtweetsTSImputed[floor(splitnumber)])
+splitindextest <- index(tradesandtweetsTSImputed[ceiling(splitnumber)])
+splitindextrain
+splitindextest
+train <- window(tradesandtweetsTSImputed, end = splitindextrain)
+test <- window(tradesandtweetsTSImputed, start = splitindextest)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+* https://blog.statsbot.co/time-series-prediction-using-recurrent-neural-networks-lstms-807fa6ca7f
+* https://cran.r-project.org/web/packages/rnn/vignettes/rnn.html
+* https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html#recurrent-neural-networks-rnn-with-imdb
+
+
 ```{r, echo=FALSE, eval=FALSE}
 library("rmarkdown")
 render("Introduction-to-R.Rpres",output_format = "pdf_document",output_file = 'Introduction-to-R.Rpres.pdf')

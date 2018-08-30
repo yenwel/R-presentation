@@ -48247,6 +48247,40 @@ Model 2: askprice ~ Lags(askprice, 1:3)
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+splitnumber <- nrow(tradesandtweetsTSImputed)*0.9
+splitindextrain <- index(tradesandtweetsTSImputed[floor(splitnumber)])
+splitindextest <- index(tradesandtweetsTSImputed[ceiling(splitnumber)])
+splitindextrain
+```
+
+```
+[1] "2018-08-30 06:18:00 UTC"
+```
+
+```r
+splitindextest
+```
+
+```
+[1] "2018-08-30 06:19:00 UTC"
+```
+
+```r
+train <- window(tradesandtweetsTSImputed, end = splitindextrain)
+test <- window(tradesandtweetsTSImputed, start = splitindextest)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+* https://blog.statsbot.co/time-series-prediction-using-recurrent-neural-networks-lstms-807fa6ca7f
+* https://cran.r-project.org/web/packages/rnn/vignettes/rnn.html
+* https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html#recurrent-neural-networks-rnn-with-imdb
+
+
 
 
 

@@ -736,7 +736,7 @@ Classes 'tbl_df', 'tbl' and 'data.frame':	11996 obs. of  88 variables:
  $ status_id              : chr  "1035052207249313792" "1035052205764751360" "1035050117961789440" "1035052205634736128" ...
  $ created_at             : POSIXct, format: "2018-08-30 06:30:51" "2018-08-30 06:30:50" ...
  $ screen_name            : chr  "Evileye420" "KucoinT" "KucoinT" "DASHTicker" ...
- $ text                   : chr  "Visit our website and find more information about the #MEMEZ project. \n\nDon't forget to share the news about "| __truncated__ "Asch (XAS) Deposit ve Withdraw Artik Etkin\n\n  Asch (XAS) cüzdani için yükseltme tamamlandi ve artik normal ça"| __truncated__ "KuCoin Haftalik Raporu #16 – 30/08/2018\n\n  En önemli güncellemelerimizi Medium’dan takip edin!\n\n  Detayli b"| __truncated__ "#DASH Price is 0.02605342 (-0.00001105) #BTC / 182.635149027 (+0.28252) #USD. Market rank is 13. #dash #bitcoin #blockchain" ...
+ $ text                   : chr  "Visit our website and find more information about the #MEMEZ project. \n\nDon't forget to share the news about "| __truncated__ "Asch (XAS) Deposit ve Withdraw Artik Etkin\n\n  Asch (XAS) cÃ¼zdani iÃ§in yÃ¼kseltme tamamlandi ve artik normal Ã§a"| __truncated__ "KuCoin Haftalik Raporu #16 â€“ 30/08/2018\n\n  En Ã¶nemli gÃ¼ncellemelerimizi Mediumâ€™dan takip edin!\n\n  Detayli b"| __truncated__ "#DASH Price is 0.02605342 (-0.00001105) #BTC / 182.635149027 (+0.28252) #USD. Market rank is 13. #dash #bitcoin #blockchain" ...
  $ source                 : chr  "Twitter Web Client" "Twitter Web Client" "Twitter Web Client" "Dashticker" ...
  $ display_text_width     : num  140 275 229 123 123 122 123 123 122 122 ...
  $ reply_to_status_id     : chr  NA NA NA NA ...
@@ -950,8 +950,8 @@ Classes 'tbl_df', 'tbl' and 'data.frame':	11996 obs. of  88 variables:
   .. [list output truncated]
  $ urls_url               :List of 11996
   ..$ : chr NA
-  ..$ : chr "news.kucoin.com/en/asch-xas-de…"
-  ..$ : chr "medium.com/kucoinexchange…"
+  ..$ : chr "news.kucoin.com/en/asch-xas-deâ€¦"
+  ..$ : chr "medium.com/kucoinexchangeâ€¦"
   ..$ : chr NA
   ..$ : chr NA
   ..$ : chr NA
@@ -2503,8 +2503,8 @@ Classes 'tbl_df', 'tbl' and 'data.frame':	11996 obs. of  88 variables:
   .. [list output truncated]
  $ status_url             : chr  "https://twitter.com/Evileye420/status/1035052207249313792" "https://twitter.com/KucoinT/status/1035052205764751360" "https://twitter.com/KucoinT/status/1035050117961789440" "https://twitter.com/DASHTicker/status/1035052205634736128" ...
  $ name                   : chr  "Sp Rahman" "KuCoin Exchange Turkey" "KuCoin Exchange Turkey" "Dash Price Ticker" ...
- $ location               : chr  "Indonesia" "Istanbul, Türkiye" "Istanbul, Türkiye" "World Wide Web" ...
- $ description            : chr  "Your Life, isn't your<U+0001F60D><U+0001F60D><U+0001F975><U+0001F976><U+0001F63F>\n\n#Follow #Followback #Bitco"| __truncated__ "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi Türkiye resmi hesabi" "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi Türkiye resmi hesabi" "Dash Price Details  (every 30 minute)" ...
+ $ location               : chr  "Indonesia" "Istanbul, TÃ¼rkiye" "Istanbul, TÃ¼rkiye" "World Wide Web" ...
+ $ description            : chr  "Your Life, isn't your<U+0001F60D><U+0001F60D><U+0001F975><U+0001F976><U+0001F63F>\n\n#Follow #Followback #Bitco"| __truncated__ "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi TÃ¼rkiye resmi hesabi" "https://t.co/TJQgwh37m5 Uluslararasi kripto para borsasi TÃ¼rkiye resmi hesabi" "Dash Price Details  (every 30 minute)" ...
  $ url                    : chr  "https://t.co/OUD7taoIfC" "https://t.co/TJQgwh37m5" "https://t.co/TJQgwh37m5" "https://t.co/4a2BZvcRvW" ...
  $ protected              : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
  $ followers_count        : int  3054 76 76 115 115 115 115 115 115 115 ...
@@ -48075,7 +48075,7 @@ summary(tweetsinrange$created_at)
 ========================================================
 
 ```r
-hist(tradesinrange$date, "secs")
+hist(tradesinrange$date, "mins")
 ```
 
 <img src="Introduction-to-R-figure/unnamed-chunk-29-1.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="4000px" />
@@ -48084,39 +48084,169 @@ hist(tradesinrange$date, "secs")
 ========================================================
 
 ```r
-hist(tweetsinrange$created_at, "secs")
+hist(tweetsinrange$created_at, "mins")
 ```
 
 <img src="Introduction-to-R-figure/unnamed-chunk-30-1.png" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="4000px" />
 
+5.2 datamining bitcoin and twitter
+========================================================
 
+```r
+#https://ro-che.info/articles/2017-02-22-group_by_month_r
+#https://stackoverflow.com/questions/23528862/summarize-with-conditions-in-dplyr
+library(dplyr)
+library(lubridate)
+tradessummary <- tradesinrange %>%
+group_by(min=floor_date(date, "minute")) %>%
+  summarize(askamount = sum(amount[type=="ask"]),
+            bidamount = sum(amount[type=="bid"]),
+            askprice  = median(price[type=="ask"]),
+            bidprice  = median(price[type=="bid"]))
+tweetssummary <- tweetsinrange %>%
+count(min=floor_date(created_at, "minute"))
+```
 
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+tradesandtweets <- tradessummary %>% inner_join(tweetssummary)
+colnames(tradesandtweets)[1] <- "minute"
+colnames(tradesandtweets)[6] <- "tweets"
+summary(tradesandtweets)
+```
 
 ```
-processing file: Introduction-to-R.Rpres
-Downloading GitHub repo yenwel/Rpresdotnetengine@master
-from URL https://api.github.com/repos/yenwel/Rpresdotnetengine/zipball/master
-Installing Rpresdotnetengine
-"C:/PROGRA~1/R/R-35~1.1/bin/x64/R" --no-site-file --no-environ --no-save  \
-  --no-restore --quiet CMD INSTALL  \
-  "C:/Users/jnve11/AppData/Local/Temp/Rtmpo7FTDE/devtools967c55533593/yenwel-Rpresdotnetengine-654be86"  \
-  --library="C:/Users/jnve11/Documents/R/win-library/3.5"  \
-  --install-tests 
-
-* installing *source* package 'Rpresdotnetengine' ...
-** R
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-    finding HTML links ... done
-** building package indices
-** testing if installed package can be loaded
-*** arch - i386
-*** arch - x64
-* DONE (Rpresdotnetengine)
-In R CMD INSTALL
-pandoc.exe: pdflatex not found. pdflatex is needed for pdf output.
-Quitting from lines 569-571 (Introduction-to-R.Rpres) 
-Error: pandoc document conversion failed with error 41
-Execution halted
+     minute                      askamount         bidamount       
+ Min.   :2018-08-30 04:32:00   Min.   : 0.0000   Min.   : 0.00000  
+ 1st Qu.:2018-08-30 05:05:45   1st Qu.: 0.0000   1st Qu.: 0.01512  
+ Median :2018-08-30 05:33:30   Median : 0.0513   Median : 0.09965  
+ Mean   :2018-08-30 05:33:11   Mean   : 0.7873   Mean   : 0.65563  
+ 3rd Qu.:2018-08-30 06:02:15   3rd Qu.: 0.5045   3rd Qu.: 0.37287  
+ Max.   :2018-08-30 06:30:00   Max.   :30.7249   Max.   :17.25619  
+                                                                   
+    askprice       bidprice        tweets     
+ Min.   :5935   Min.   :5935   Min.   : 7.00  
+ 1st Qu.:5962   1st Qu.:5964   1st Qu.:20.00  
+ Median :5968   Median :5971   Median :23.00  
+ Mean   :5969   Mean   :5972   Mean   :24.16  
+ 3rd Qu.:5978   3rd Qu.:5983   3rd Qu.:26.00  
+ Max.   :5992   Max.   :5993   Max.   :98.00  
+ NA's   :31     NA's   :4                     
 ```
+
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+library(zoo)
+tradesandtweetsTS <- zoo(tradesandtweets[2:6],tradesandtweets$minute)
+tradesandtweetsTSImputed <- na.locf(na.locf(tradesandtweetsTS),fromLast = TRUE)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+summary(tradesandtweetsTSImputed)
+```
+
+```
+     Index                       askamount         bidamount       
+ Min.   :2018-08-30 04:32:00   Min.   : 0.0000   Min.   : 0.00000  
+ 1st Qu.:2018-08-30 05:05:45   1st Qu.: 0.0000   1st Qu.: 0.01512  
+ Median :2018-08-30 05:33:30   Median : 0.0513   Median : 0.09965  
+ Mean   :2018-08-30 05:33:11   Mean   : 0.7873   Mean   : 0.65563  
+ 3rd Qu.:2018-08-30 06:02:15   3rd Qu.: 0.5045   3rd Qu.: 0.37287  
+ Max.   :2018-08-30 06:30:00   Max.   :30.7249   Max.   :17.25619  
+    askprice       bidprice        tweets     
+ Min.   :5935   Min.   :5935   Min.   : 7.00  
+ 1st Qu.:5963   1st Qu.:5964   1st Qu.:20.00  
+ Median :5971   Median :5971   Median :23.00  
+ Mean   :5971   Mean   :5972   Mean   :24.16  
+ 3rd Qu.:5980   3rd Qu.:5982   3rd Qu.:26.00  
+ Max.   :5992   Max.   :5993   Max.   :98.00  
+```
+
+
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+plot(tradesandtweetsTSImputed)
+```
+
+<img src="Introduction-to-R-figure/unnamed-chunk-35-1.png" title="plot of chunk unnamed-chunk-35" alt="plot of chunk unnamed-chunk-35" width="4000px" />
+
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+library(lmtest)
+grangertest(tweets ~ bidprice, order = 3, data=tradesandtweetsTSImputed)
+```
+
+```
+Granger causality test
+
+Model 1: tweets ~ Lags(tweets, 1:3) + Lags(bidprice, 1:3)
+Model 2: tweets ~ Lags(tweets, 1:3)
+  Res.Df Df      F Pr(>F)
+1    102                 
+2    105 -3 0.7906 0.5019
+```
+
+```r
+grangertest(tweets ~ askprice, order = 3, data=tradesandtweetsTSImputed)
+```
+
+```
+Granger causality test
+
+Model 1: tweets ~ Lags(tweets, 1:3) + Lags(askprice, 1:3)
+Model 2: tweets ~ Lags(tweets, 1:3)
+  Res.Df Df      F Pr(>F)
+1    102                 
+2    105 -3 1.2985 0.2791
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+
+```r
+library(lmtest)
+grangertest(bidprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
+```
+
+```
+Granger causality test
+
+Model 1: bidprice ~ Lags(bidprice, 1:3) + Lags(tweets, 1:3)
+Model 2: bidprice ~ Lags(bidprice, 1:3)
+  Res.Df Df      F  Pr(>F)  
+1    102                    
+2    105 -3 2.3425 0.07755 .
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+```r
+grangertest(askprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
+```
+
+```
+Granger causality test
+
+Model 1: askprice ~ Lags(askprice, 1:3) + Lags(tweets, 1:3)
+Model 2: askprice ~ Lags(askprice, 1:3)
+  Res.Df Df      F   Pr(>F)   
+1    102                      
+2    105 -3 4.0197 0.009512 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+
+
+

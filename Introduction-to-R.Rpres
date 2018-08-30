@@ -556,16 +556,79 @@ summary(tweetsinrange$created_at)
 5.2 datamining bitcoin and twitter
 ========================================================
 ```{r, out.width = "4000px"}
-hist(tradesinrange$date, "secs")
+hist(tradesinrange$date, "mins")
 ```
 
 5.2 datamining bitcoin and twitter
 ========================================================
 ```{r, out.width = "4000px"}
-hist(tweetsinrange$created_at, "secs")
+hist(tweetsinrange$created_at, "mins")
 ```
 
-```{r, echo=FALSE}
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+#https://ro-che.info/articles/2017-02-22-group_by_month_r
+#https://stackoverflow.com/questions/23528862/summarize-with-conditions-in-dplyr
+library(dplyr)
+library(lubridate)
+tradessummary <- tradesinrange %>%
+group_by(min=floor_date(date, "minute")) %>%
+  summarize(askamount = sum(amount[type=="ask"]),
+            bidamount = sum(amount[type=="bid"]),
+            askprice  = median(price[type=="ask"]),
+            bidprice  = median(price[type=="bid"]))
+tweetssummary <- tweetsinrange %>%
+count(min=floor_date(created_at, "minute"))
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+tradesandtweets <- tradessummary %>% inner_join(tweetssummary)
+colnames(tradesandtweets)[1] <- "minute"
+colnames(tradesandtweets)[6] <- "tweets"
+summary(tradesandtweets)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+library(zoo)
+tradesandtweetsTS <- zoo(tradesandtweets[2:6],tradesandtweets$minute)
+tradesandtweetsTSImputed <- na.locf(na.locf(tradesandtweetsTS),fromLast = TRUE)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+summary(tradesandtweetsTSImputed)
+```
+
+
+5.2 datamining bitcoin and twitter
+========================================================
+```{r, out.width = "4000px"}
+plot(tradesandtweetsTSImputed)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+library(lmtest)
+grangertest(tweets ~ bidprice, order = 3, data=tradesandtweetsTSImputed)
+grangertest(tweets ~ askprice, order = 3, data=tradesandtweetsTSImputed)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+```{r}
+library(lmtest)
+grangertest(bidprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
+grangertest(askprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
+```
+
+```{r, echo=FALSE, eval=FALSE}
 library("rmarkdown")
 render("Introduction-to-R.Rpres",output_format = "pdf_document",output_file = 'Introduction-to-R.Rpres.pdf')
 ```

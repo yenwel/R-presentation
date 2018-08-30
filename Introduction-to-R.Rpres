@@ -451,12 +451,19 @@ then google (CRAN because R is to confusing for google)
 
 5.2 data mining bitcoin and twitter
 ========================================================
-```{r}
+```{r, eval=FALSE}
 #http://beautifuldata.net/2015/01/querying-the-bitcoin-blockchain-with-r/
 library(Rbitcoin)
 trades <- market.api.process('kraken',c('BTC','EUR'),'trades')
 Rbitcoin.plot(trades, col='blue')
 ```
+```{r, echo=FALSE, eval=FALSE}
+save(trades,file="trades.Rda")
+```
+```{r, echo=FALSE}
+load("trades.Rda")
+```
+
 
 
 5.2 data mining bitcoin and twitter
@@ -468,7 +475,7 @@ Rbitcoin.plot(trades, col='blue')
 ## install dev version of rtweet from github
 #devtools::install_github("mkearney/rtweet")
 ```
-```{r}
+```{r, eval=FALSE}
 ## load rtweet package
 library(rtweet)
 # these environment variables are set via an app you can make at https://developer.twitter.com/en/apps
@@ -486,6 +493,12 @@ token <- create_token(
   access_token = access_token, 
   access_secret = access_secret)
 bitcoin_tweets <- search_tweets(q = "#bitcoin", n = 15000 , retryonratelimit=F)
+```
+```{r, echo=FALSE, eval=FALSE}
+save(bitcoin_tweets,file="tweets.Rda")
+```
+```{r, echo=FALSE}
+load("tweets.Rda")
 ```
 
 5.2 datamining bitcoin and twitter

@@ -573,20 +573,20 @@ hist(tweetsinrange$created_at, "mins")
 library(dplyr)
 library(lubridate)
 tradessummary <- tradesinrange %>%
-group_by(min=floor_date(date, "minute")) %>%
+group_by(sec=floor_date(date, "second")) %>%
   summarize(askamount = sum(amount[type=="ask"]),
             bidamount = sum(amount[type=="bid"]),
             askprice  = median(price[type=="ask"]),
             bidprice  = median(price[type=="bid"]))
 tweetssummary <- tweetsinrange %>%
-count(min=floor_date(created_at, "minute"))
+count(sec=floor_date(created_at, "second"))
 ```
 
 5.2 datamining bitcoin and twitter
 ========================================================
 ```{r}
 tradesandtweets <- tradessummary %>% inner_join(tweetssummary)
-colnames(tradesandtweets)[1] <- "minute"
+colnames(tradesandtweets)[1] <- "second"
 colnames(tradesandtweets)[6] <- "tweets"
 summary(tradesandtweets)
 ```
@@ -595,7 +595,7 @@ summary(tradesandtweets)
 ========================================================
 ```{r}
 library(zoo)
-tradesandtweetsTS <- zoo(tradesandtweets[2:6],tradesandtweets$minute)
+tradesandtweetsTS <- zoo(tradesandtweets[2:6],tradesandtweets$second)
 tradesandtweetsTSImputed <- na.locf(na.locf(tradesandtweetsTS),fromLast = TRUE)
 ```
 
@@ -630,6 +630,19 @@ grangertest(askprice ~ tweets, order = 3, data=tradesandtweetsTSImputed)
 
 5.2 datamining bitcoin and twitter
 ========================================================
+
+* https://www.quantstart.com/articles/Johansen-Test-for-Cointegrating-Time-Series-Analysis-in-R
+* https://www.statisticshowto.datasciencecentral.com/cointegration/
+* http://www.eco.uc3m.es/~jgonzalo/teaching/EconometriaII/cointegration.htm
+
+```{r}
+library(urca)
+jotest=ca.jo(tradesandtweetsTSImputed, type="trace", K=2, ecdet="none", spec="longrun")
+summary(jotest)
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
 ```{r}
 splitnumber <- nrow(tradesandtweetsTSImputed)*0.9
 splitindextrain <- index(tradesandtweetsTSImputed[floor(splitnumber)])
@@ -642,9 +655,11 @@ test <- window(tradesandtweetsTSImputed, start = splitindextest)
 
 5.2 datamining bitcoin and twitter
 ========================================================
+* https://www.quantstart.com/articles/Johansen-Test-for-Cointegrating-Time-Series-Analysis-in-R
 * https://blog.statsbot.co/time-series-prediction-using-recurrent-neural-networks-lstms-807fa6ca7f
 * https://cran.r-project.org/web/packages/rnn/vignettes/rnn.html
 * https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html#recurrent-neural-networks-rnn-with-imdb
+* https://www.r-bloggers.com/time-series-deep-learning-forecasting-sunspots-with-keras-stateful-lstm-in-r/
 
 
 ```{r, echo=FALSE, eval=FALSE}

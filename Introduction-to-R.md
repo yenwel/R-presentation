@@ -374,13 +374,6 @@ Console.WriteLine(i--);
 Console.WriteLine(--i);
 ```
 
-```
-2
-4
-4
-2
-```
-
 4.2 Basic types (.NET)
 ========================================================
 
@@ -390,13 +383,6 @@ Console.WriteLine(true);
 Console.WriteLine("hello world?");
 enum Color {Red, Green, Blue};  
 Console.WriteLine(Color.Red);
-```
-
-```
-1
-True
-hello world?
-Red
 ```
 
 4.2 Basic types (R)
@@ -460,13 +446,6 @@ Console.WriteLine(new [] { 1 , 2 , 3}[1]);
 Console.WriteLine(new List<object> { "Fred" , 20}[0]);
 Console.WriteLine(new Dictionary<string,object>{{"name","Fred"},{"age",20}}["name"]);
 Console.WriteLine(new { Name = "Fred", Age = 20});
-```
-
-```
-2
-Fred
-Fred
-{ Name = Fred, Age = 20 }
 ```
 
 4.3 Collections and composite types (R)
@@ -538,12 +517,6 @@ Func<int,int> myF = (int x) => x + 1;
 Console.WriteLine(myF);
 Console.WriteLine(myF(1));
 Console.WriteLine(new [] {1 , 2 , 3 , 4}.Select(myF).FirstOrDefault());
-```
-
-```
-System.Func`2[System.Int32,System.Int32]
-2
-2
 ```
 
 4.4 Functions (R)

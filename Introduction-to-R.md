@@ -48071,13 +48071,13 @@ hist(tweetsinrange$created_at, "mins")
 library(dplyr)
 library(lubridate)
 tradessummary <- tradesinrange %>%
-group_by(min=floor_date(date, "minute")) %>%
+group_by(sec=floor_date(date, "second")) %>%
   summarize(askamount = sum(amount[type=="ask"]),
             bidamount = sum(amount[type=="bid"]),
             askprice  = median(price[type=="ask"]),
             bidprice  = median(price[type=="bid"]))
 tweetssummary <- tweetsinrange %>%
-count(min=floor_date(created_at, "minute"))
+count(sec=floor_date(created_at, "second"))
 ```
 
 5.2 datamining bitcoin and twitter
@@ -48085,28 +48085,28 @@ count(min=floor_date(created_at, "minute"))
 
 ```r
 tradesandtweets <- tradessummary %>% inner_join(tweetssummary)
-colnames(tradesandtweets)[1] <- "minute"
+colnames(tradesandtweets)[1] <- "second"
 colnames(tradesandtweets)[6] <- "tweets"
 summary(tradesandtweets)
 ```
 
 ```
-     minute                      askamount         bidamount       
- Min.   :2018-08-30 04:32:00   Min.   : 0.0000   Min.   : 0.00000  
- 1st Qu.:2018-08-30 05:05:45   1st Qu.: 0.0000   1st Qu.: 0.01512  
- Median :2018-08-30 05:33:30   Median : 0.0513   Median : 0.09965  
- Mean   :2018-08-30 05:33:11   Mean   : 0.7873   Mean   : 0.65563  
- 3rd Qu.:2018-08-30 06:02:15   3rd Qu.: 0.5045   3rd Qu.: 0.37287  
- Max.   :2018-08-30 06:30:00   Max.   :30.7249   Max.   :17.25619  
-                                                                   
+     second                      askamount         bidamount        
+ Min.   :2018-08-30 04:35:13   Min.   :0.00000   Min.   : 0.000000  
+ 1st Qu.:2018-08-30 05:27:01   1st Qu.:0.00000   1st Qu.: 0.000000  
+ Median :2018-08-30 05:52:41   Median :0.00000   Median : 0.002869  
+ Mean   :2018-08-30 05:44:31   Mean   :0.21235   Mean   : 0.208116  
+ 3rd Qu.:2018-08-30 06:06:42   3rd Qu.:0.02309   3rd Qu.: 0.028688  
+ Max.   :2018-08-30 06:30:49   Max.   :6.97442   Max.   :10.005400  
+                                                                    
     askprice       bidprice        tweets     
- Min.   :5935   Min.   :5935   Min.   : 7.00  
- 1st Qu.:5962   1st Qu.:5964   1st Qu.:20.00  
- Median :5968   Median :5971   Median :23.00  
- Mean   :5969   Mean   :5972   Mean   :24.16  
- 3rd Qu.:5978   3rd Qu.:5983   3rd Qu.:26.00  
- Max.   :5992   Max.   :5993   Max.   :98.00  
- NA's   :31     NA's   :4                     
+ Min.   :5934   Min.   :5931   Min.   :1.000  
+ 1st Qu.:5956   1st Qu.:5957   1st Qu.:1.000  
+ Median :5967   Median :5967   Median :1.000  
+ Mean   :5966   Mean   :5966   Mean   :1.283  
+ 3rd Qu.:5976   3rd Qu.:5979   3rd Qu.:1.000  
+ Max.   :5992   Max.   :5994   Max.   :9.000  
+ NA's   :123    NA's   :56                    
 ```
 
 5.2 datamining bitcoin and twitter
@@ -48114,7 +48114,7 @@ summary(tradesandtweets)
 
 ```r
 library(zoo)
-tradesandtweetsTS <- zoo(tradesandtweets[2:6],tradesandtweets$minute)
+tradesandtweetsTS <- zoo(tradesandtweets[2:6],tradesandtweets$second)
 tradesandtweetsTSImputed <- na.locf(na.locf(tradesandtweetsTS),fromLast = TRUE)
 ```
 
@@ -48126,20 +48126,20 @@ summary(tradesandtweetsTSImputed)
 ```
 
 ```
-     Index                       askamount         bidamount       
- Min.   :2018-08-30 04:32:00   Min.   : 0.0000   Min.   : 0.00000  
- 1st Qu.:2018-08-30 05:05:45   1st Qu.: 0.0000   1st Qu.: 0.01512  
- Median :2018-08-30 05:33:30   Median : 0.0513   Median : 0.09965  
- Mean   :2018-08-30 05:33:11   Mean   : 0.7873   Mean   : 0.65563  
- 3rd Qu.:2018-08-30 06:02:15   3rd Qu.: 0.5045   3rd Qu.: 0.37287  
- Max.   :2018-08-30 06:30:00   Max.   :30.7249   Max.   :17.25619  
+     Index                       askamount         bidamount        
+ Min.   :2018-08-30 04:35:13   Min.   :0.00000   Min.   : 0.000000  
+ 1st Qu.:2018-08-30 05:27:01   1st Qu.:0.00000   1st Qu.: 0.000000  
+ Median :2018-08-30 05:52:41   Median :0.00000   Median : 0.002869  
+ Mean   :2018-08-30 05:44:31   Mean   :0.21235   Mean   : 0.208116  
+ 3rd Qu.:2018-08-30 06:06:42   3rd Qu.:0.02309   3rd Qu.: 0.028688  
+ Max.   :2018-08-30 06:30:49   Max.   :6.97442   Max.   :10.005400  
     askprice       bidprice        tweets     
- Min.   :5935   Min.   :5935   Min.   : 7.00  
- 1st Qu.:5963   1st Qu.:5964   1st Qu.:20.00  
- Median :5971   Median :5971   Median :23.00  
- Mean   :5971   Mean   :5972   Mean   :24.16  
- 3rd Qu.:5980   3rd Qu.:5982   3rd Qu.:26.00  
- Max.   :5992   Max.   :5993   Max.   :98.00  
+ Min.   :5934   Min.   :5931   Min.   :1.000  
+ 1st Qu.:5957   1st Qu.:5958   1st Qu.:1.000  
+ Median :5967   Median :5968   Median :1.000  
+ Mean   :5966   Mean   :5967   Mean   :1.283  
+ 3rd Qu.:5977   3rd Qu.:5978   3rd Qu.:1.000  
+ Max.   :5992   Max.   :5994   Max.   :9.000  
 ```
 
 
@@ -48166,8 +48166,8 @@ Granger causality test
 Model 1: tweets ~ Lags(tweets, 1:3) + Lags(bidprice, 1:3)
 Model 2: tweets ~ Lags(tweets, 1:3)
   Res.Df Df      F Pr(>F)
-1    102                 
-2    105 -3 0.7906 0.5019
+1    174                 
+2    177 -3 2.0614 0.1071
 ```
 
 ```r
@@ -48180,8 +48180,8 @@ Granger causality test
 Model 1: tweets ~ Lags(tweets, 1:3) + Lags(askprice, 1:3)
 Model 2: tweets ~ Lags(tweets, 1:3)
   Res.Df Df      F Pr(>F)
-1    102                 
-2    105 -3 1.2985 0.2791
+1    174                 
+2    177 -3 1.2508  0.293
 ```
 
 5.2 datamining bitcoin and twitter
@@ -48198,8 +48198,8 @@ Granger causality test
 Model 1: bidprice ~ Lags(bidprice, 1:3) + Lags(tweets, 1:3)
 Model 2: bidprice ~ Lags(bidprice, 1:3)
   Res.Df Df      F  Pr(>F)  
-1    102                    
-2    105 -3 2.3425 0.07755 .
+1    174                    
+2    177 -3 3.6913 0.01306 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
@@ -48213,11 +48213,72 @@ Granger causality test
 
 Model 1: askprice ~ Lags(askprice, 1:3) + Lags(tweets, 1:3)
 Model 2: askprice ~ Lags(askprice, 1:3)
-  Res.Df Df      F   Pr(>F)   
-1    102                      
-2    105 -3 4.0197 0.009512 **
+  Res.Df Df      F  Pr(>F)  
+1    174                    
+2    177 -3 3.6911 0.01306 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+5.2 datamining bitcoin and twitter
+========================================================
+
+* https://www.quantstart.com/articles/Johansen-Test-for-Cointegrating-Time-Series-Analysis-in-R
+* https://www.statisticshowto.datasciencecentral.com/cointegration/
+* http://www.eco.uc3m.es/~jgonzalo/teaching/EconometriaII/cointegration.htm
+
+
+```r
+library(urca)
+jotest=ca.jo(tradesandtweetsTSImputed, type="trace", K=2, ecdet="none", spec="longrun")
+summary(jotest)
+```
+
+```
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: trace statistic , with linear trend 
+
+Eigenvalues (lambda):
+[1] 0.44760708 0.42633761 0.26100776 0.25251426 0.01738295
+
+Values of teststatistic and critical values of test:
+
+           test 10pct  5pct  1pct
+r <= 4 |   3.19  6.50  8.18 11.65
+r <= 3 |  56.16 15.66 17.95 23.52
+r <= 2 | 111.21 28.71 31.52 37.22
+r <= 1 | 212.35 45.23 48.28 55.43
+r = 0  | 320.37 66.49 70.60 78.87
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+             askamount.l2 bidamount.l2 askprice.l2 bidprice.l2  tweets.l2
+askamount.l2   1.00000000    1.0000000  1.00000000   1.0000000  1.0000000
+bidamount.l2   0.13159663   -8.3002099  0.15015526   1.3277022  0.2544446
+askprice.l2    0.03852807   -0.2113833  0.07029612  -0.7416664  0.9753073
+bidprice.l2   -0.03381466    0.1482747 -0.04460132   0.7367105  1.7259828
+tweets.l2     -0.79765283    4.1926940  1.04333453   0.2552180 -4.0074645
+
+Weights W:
+(This is the loading matrix)
+
+            askamount.l2 bidamount.l2 askprice.l2 bidprice.l2
+askamount.d -0.941269124  -0.01739051 -0.02521191 -0.03414538
+bidamount.d  0.112249627   0.11590606 -0.28231403 -0.07409542
+askprice.d  -0.008235769   0.08082954 -0.69769945  0.36919171
+bidprice.d   0.156452862  -0.09310935 -0.45840891 -0.14646329
+tweets.d     0.253593596  -0.04809230 -0.27357312 -0.01013431
+                tweets.l2
+askamount.d  0.0003669734
+bidamount.d  0.0001669573
+askprice.d  -0.0026009820
+bidprice.d  -0.0076877531
+tweets.d     0.0008624240
 ```
 
 5.2 datamining bitcoin and twitter
@@ -48231,7 +48292,7 @@ splitindextrain
 ```
 
 ```
-[1] "2018-08-30 06:18:00 UTC"
+[1] "2018-08-30 06:19:51 UTC"
 ```
 
 ```r
@@ -48239,7 +48300,7 @@ splitindextest
 ```
 
 ```
-[1] "2018-08-30 06:19:00 UTC"
+[1] "2018-08-30 06:19:53 UTC"
 ```
 
 ```r
@@ -48249,9 +48310,11 @@ test <- window(tradesandtweetsTSImputed, start = splitindextest)
 
 5.2 datamining bitcoin and twitter
 ========================================================
+* https://www.quantstart.com/articles/Johansen-Test-for-Cointegrating-Time-Series-Analysis-in-R
 * https://blog.statsbot.co/time-series-prediction-using-recurrent-neural-networks-lstms-807fa6ca7f
 * https://cran.r-project.org/web/packages/rnn/vignettes/rnn.html
 * https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html#recurrent-neural-networks-rnn-with-imdb
+* https://www.r-bloggers.com/time-series-deep-learning-forecasting-sunspots-with-keras-stateful-lstm-in-r/
 
 
 
